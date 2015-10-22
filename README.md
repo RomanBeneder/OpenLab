@@ -3,3 +3,5 @@ The project OpenLab (an acronym for "Open Laboratory") is located at the Departm
 
 
 The project is financed by public funds of MA23 City of Vienna, under grant number MA23-Projekt 17-08. The duration of the project is from April 2015 to March 2018.
+
+![FH Technikum Wien](https://raw.githubusercontent.com/RomanBeneder/OpenLab/master/img/FHTW_Logo_Farbe_transparent.png)
