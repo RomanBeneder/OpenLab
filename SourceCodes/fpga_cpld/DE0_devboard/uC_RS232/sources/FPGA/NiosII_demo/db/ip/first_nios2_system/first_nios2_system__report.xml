@@ -1,0 +1,1964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2015.06.10.16:28:10"
+ outputDirectory="C:/altera/workspace/demo/db/ip/first_nios2_system/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone III"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP3C16F484C6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="led_pio_external_connection" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port
+       name="led_pio_external_connection_export"
+       direction="output"
+       role="export"
+       width="8" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="first_nios2_system:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP3C16F484C6,AUTO_DEVICE_FAMILY=Cyclone III,AUTO_GENERATION_ID=1433946476,AUTO_UNIQUE_ID=(clock_source:13.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_onchip_memory2:13.0.1.99.2:allowInSystemMemoryContentEditor=false,autoInitializationFileName=first_nios2_system_onchip_mem,blockType=AUTO,dataWidth=32,derived_gui_ram_block_type=Automatic,derived_init_file_name=first_nios2_system_onchip_mem.hex,derived_is_hardcopy=false,derived_set_addr_width=13,deviceFamily=Cyclone III,deviceFeatures=ADDRESS_STALL 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 COMPILER_SUPPORT 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 1 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 1 FITTER_USE_FALLING_EDGE_DELAY 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 0 HARDCOPY 0 HAS_18_BIT_MULTS 0 HAS_ACE_SUPPORT 1 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 0 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 0 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 0 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 1 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 0 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 0 HAS_DDB_FDI_SUPPORT 0 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 1 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 1 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 0 HAS_ERROR_DETECTION_SUPPORT 0 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FITTER_EARLY_TIMING_ESTIMATE_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 1 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 0 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 0 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 0 HAS_IBISO_WRITER_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_INTERFACE_PLANNER_SUPPORT 0 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 0 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LIMITED_TCL_FITTER_SUPPORT 0 HAS_LOGIC_LOCK_SUPPORT 1 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 1 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_ROUTING_SUPPORT 0 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 0 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 0 HAS_PVA_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 1 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 1 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 0 HAS_U2B2_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 1 HAS_VCCPD_POWER_RAIL 0 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 0 IFP_USE_LEGACY_IO_CHECKER 0 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 1 INSTALLED 0 IS_CONFIG_ROM 0 IS_DEFAULT_FAMILY 0 IS_HARDCOPY_FAMILY 0 LVDS_IO 0 M10K_MEMORY 0 M144K_MEMORY 0 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 1 MLAB_MEMORY 0 MRAM_MEMORY 0 NOT_LISTED 0 NO_RPE_SUPPORT 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_TDC_SUPPORT 0 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_SUPPORT 1 QFIT_IN_DEVELOPMENT 0 QMAP_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RISEFALL_SUPPORT_IS_HIDDEN 0 STRICT_TIMING_DB_CHECKS 0 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 0 SUPPORTS_CRC 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 0 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 0 TRANSCEIVER_6G_BLOCK 0 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_OCT_AUTO_CALIBRATION 0 USE_RELAX_IO_ASSIGNMENT_RULES 1 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1,dualPort=false,initMemContent=true,initializationFileName=onchip_mem.hex,instanceID=NONE,memorySize=20480,readDuringWriteMode=DONT_CARE,simAllowMRAMContentsFile=false,simMemInitOnlyFilename=0,singleClockOperation=false,slave1Latency=1,slave2Latency=1,useNonDefaultInitFile=false,useShallowMemBlocks=false,writable=true)(altera_nios2_qsys:13.0:bht_ramBlockType=Automatic,breakAbsoluteAddr=2080,breakOffset=32,breakSlave=cpu.jtag_debug_module,clockFrequency=50000000,cpuID=0,cpuID_stored=0,cpuReset=false,customInstSlavesSystemInfo=&lt;info/&gt;,dataAddrWidth=17,dataSlaveMapParam=&lt;address-map&gt;&lt;slave name=&apos;cpu.jtag_debug_module&apos; start=&apos;0x800&apos; end=&apos;0x1000&apos; /&gt;&lt;slave name=&apos;onchip_mem.s1&apos; start=&apos;0x8000&apos; end=&apos;0xD000&apos; /&gt;&lt;slave name=&apos;sys_clk_timer.s1&apos; start=&apos;0x10000&apos; end=&apos;0x10020&apos; /&gt;&lt;slave name=&apos;led_pio.s1&apos; start=&apos;0x10020&apos; end=&apos;0x10030&apos; /&gt;&lt;slave name=&apos;sysid.control_slave&apos; start=&apos;0x10030&apos; end=&apos;0x10038&apos; /&gt;&lt;slave name=&apos;jtag_uart.avalon_jtag_slave&apos; start=&apos;0x10038&apos; end=&apos;0x10040&apos; /&gt;&lt;/address-map&gt;,dcache_bursts=false,dcache_bursts_derived=false,dcache_lineSize=32,dcache_lineSize_derived=32,dcache_numTCDM=0,dcache_omitDataMaster=false,dcache_ramBlockType=Automatic,dcache_size=2048,dcache_size_derived=2048,dcache_tagramBlockType=Automatic,dcache_victim_buf_impl=ram,debug_OCIOnchipTrace=_128,debug_assignJtagInstanceID=false,debug_debugReqSignals=false,debug_embeddedPLL=true,debug_jtagInstanceID=0,debug_level=Level1,debug_triggerArming=true,deviceFamilyName=Cyclone III,deviceFeaturesSystemInfo=ADDRESS_STALL 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 COMPILER_SUPPORT 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 1 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 1 FITTER_USE_FALLING_EDGE_DELAY 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 0 HARDCOPY 0 HAS_18_BIT_MULTS 0 HAS_ACE_SUPPORT 1 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 0 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 0 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 0 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 1 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 0 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 0 HAS_DDB_FDI_SUPPORT 0 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 1 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 1 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 0 HAS_ERROR_DETECTION_SUPPORT 0 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FITTER_EARLY_TIMING_ESTIMATE_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 1 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 0 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 0 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 0 HAS_IBISO_WRITER_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_INTERFACE_PLANNER_SUPPORT 0 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 0 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LIMITED_TCL_FITTER_SUPPORT 0 HAS_LOGIC_LOCK_SUPPORT 1 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 1 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_ROUTING_SUPPORT 0 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 0 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 0 HAS_PVA_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 1 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 1 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 0 HAS_U2B2_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 1 HAS_VCCPD_POWER_RAIL 0 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 0 IFP_USE_LEGACY_IO_CHECKER 0 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 1 INSTALLED 0 IS_CONFIG_ROM 0 IS_DEFAULT_FAMILY 0 IS_HARDCOPY_FAMILY 0 LVDS_IO 0 M10K_MEMORY 0 M144K_MEMORY 0 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 1 MLAB_MEMORY 0 MRAM_MEMORY 0 NOT_LISTED 0 NO_RPE_SUPPORT 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_TDC_SUPPORT 0 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_SUPPORT 1 QFIT_IN_DEVELOPMENT 0 QMAP_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RISEFALL_SUPPORT_IS_HIDDEN 0 STRICT_TIMING_DB_CHECKS 0 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 0 SUPPORTS_CRC 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 0 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 0 TRANSCEIVER_6G_BLOCK 0 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_OCT_AUTO_CALIBRATION 0 USE_RELAX_IO_ASSIGNMENT_RULES 1 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1,exceptionAbsoluteAddr=32800,exceptionOffset=32,exceptionSlave=onchip_mem.s1,icache_burstType=None,icache_numTCIM=0,icache_ramBlockType=Automatic,icache_size=2048,icache_tagramBlockType=Automatic,impl=Small,instAddrWidth=16,instSlaveMapParam=&lt;address-map&gt;&lt;slave name=&apos;cpu.jtag_debug_module&apos; start=&apos;0x800&apos; end=&apos;0x1000&apos; /&gt;&lt;slave name=&apos;onchip_mem.s1&apos; start=&apos;0x8000&apos; end=&apos;0xD000&apos; /&gt;&lt;/address-map&gt;,internalIrqMaskSystemInfo=65538,is_hardcopy_compatible=false,manuallyAssignCpuID=true,mmu_TLBMissExcAbsAddr=0,mmu_TLBMissExcOffset=0,mmu_TLBMissExcSlave=None,mmu_autoAssignTlbPtrSz=true,mmu_enabled=false,mmu_processIDNumBits=8,mmu_ramBlockType=Automatic,mmu_tlbNumWays=16,mmu_tlbPtrSz=7,mmu_udtlbNumEntries=6,mmu_uitlbNumEntries=4,mpu_enabled=false,mpu_minDataRegionSize=12,mpu_minInstRegionSize=12,mpu_numOfDataRegion=8,mpu_numOfInstRegion=8,mpu_useLimit=false,muldiv_divider=false,muldiv_multiplierType=NoneSmall,ocimem_ramBlockType=Automatic,regfile_ramBlockType=Automatic,resetAbsoluteAddr=32768,resetOffset=0,resetSlave=onchip_mem.s1,setting_HBreakTest=false,setting_HDLSimCachesCleared=true,setting_activateModelChecker=false,setting_activateMonitors=true,setting_activateTestEndChecker=false,setting_activateTrace=true,setting_allowFullAddressRange=false,setting_alwaysEncrypt=true,setting_asic_enabled=false,setting_asic_synopsys_translate_on_off=false,setting_avalonDebugPortPresent=false,setting_bhtIndexPcOnly=false,setting_bhtPtrSz=8,setting_bigEndian=false,setting_bit31BypassDCache=true,setting_branchPredictionType=Automatic,setting_clearXBitsLDNonBypass=true,setting_debugSimGen=false,setting_ecc_present=false,setting_exportPCB=false,setting_export_large_RAMs=false,setting_exportvectors=false,setting_extraExceptionInfo=false,setting_fullWaveformSignals=false,setting_illegalInstructionsTrap=false,setting_illegalMemAccessDetection=false,setting_interruptControllerType=Internal,setting_oci_export_jtag_signals=false,setting_perfCounterWidth=32,setting_performanceCounter=false,setting_preciseDivisionErrorException=false,setting_preciseIllegalMemAccessException=false,setting_preciseSlaveAccessErrorException=false,setting_shadowRegisterSets=0,setting_showInternalSettings=false,setting_showUnpublishedSettings=false,tightlyCoupledDataMaster0AddrWidth=1,tightlyCoupledDataMaster0MapParam=,tightlyCoupledDataMaster1AddrWidth=1,tightlyCoupledDataMaster1MapParam=,tightlyCoupledDataMaster2AddrWidth=1,tightlyCoupledDataMaster2MapParam=,tightlyCoupledDataMaster3AddrWidth=1,tightlyCoupledDataMaster3MapParam=,tightlyCoupledInstructionMaster0AddrWidth=1,tightlyCoupledInstructionMaster0MapParam=,tightlyCoupledInstructionMaster1AddrWidth=1,tightlyCoupledInstructionMaster1MapParam=,tightlyCoupledInstructionMaster2AddrWidth=1,tightlyCoupledInstructionMaster2MapParam=,tightlyCoupledInstructionMaster3AddrWidth=1,tightlyCoupledInstructionMaster3MapParam=,translate_off= &quot;synthesis translate_off&quot; ,translate_on= &quot;synthesis translate_on&quot;  ,userDefinedSettings=)(altera_avalon_jtag_uart:13.0.1.99.2:allowMultipleConnections=false,avalonSpec=2.0,enableInteractiveInput=false,enableInteractiveOutput=false,hubInstanceID=0,legacySignalAllow=false,readBufferDepth=64,readIRQThreshold=8,simInputCharacterStream=,simInteractiveOptions=NO_INTERACTIVE_WINDOWS,useRegistersForReadBuffer=false,useRegistersForWriteBuffer=false,useRelativePathForSimFile=false,writeBufferDepth=64,writeIRQThreshold=8)(altera_avalon_timer:13.0.1.99.2:alwaysRun=false,counterSize=32,fixedPeriod=false,loadValue=49999,mult=0,period=1,periodUnits=MSEC,periodUnitsString=ms,resetOutput=false,slave_address_width=3,snapshot=true,systemFrequency=50000000,ticksPerSec=1000,timeoutPulseOutput=false,timerPreset=FULL_FEATURED,valueInSecond=0)(altera_avalon_sysid_qsys:13.0:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone III,id=0,timestamp=1433946476)(altera_avalon_pio:13.0.1.99.2:bitClearingEdgeCapReg=false,bitModifyingOutReg=false,captureEdge=false,clockRate=50000000,derived_capture=false,derived_do_test_bench_wiring=false,derived_edge_type=NONE,derived_has_in=false,derived_has_irq=false,derived_has_out=true,derived_has_tri=false,derived_irq_type=NONE,direction=Output,edgeType=RISING,generateIRQ=false,irqType=LEVEL,resetValue=0,simDoTestBenchWiring=false,simDrivenValue=0,width=8)(clock:13.0:)(clock:13.0:)(clock:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(avalon:13.0:arbitrationPriority=1,baseAddress=0x00010038,defaultConnection=false)(avalon:13.0:arbitrationPriority=1,baseAddress=0x8000,defaultConnection=false)(avalon:13.0:arbitrationPriority=1,baseAddress=0x8000,defaultConnection=false)(clock:13.0:)(reset:13.0:)(avalon:13.0:arbitrationPriority=1,baseAddress=0x00010000,defaultConnection=false)(clock:13.0:)(reset:13.0:)(avalon:13.0:arbitrationPriority=1,baseAddress=0x00010030,defaultConnection=false)(clock:13.0:)(reset:13.0:)(avalon:13.0:arbitrationPriority=1,baseAddress=0x00010020,defaultConnection=false)(interrupt:13.0:irqNumber=16)(interrupt:13.0:irqNumber=1)(avalon:13.0:arbitrationPriority=1,baseAddress=0x0800,defaultConnection=false)(avalon:13.0:arbitrationPriority=1,baseAddress=0x0800,defaultConnection=false)"
+   instancePathKey="first_nios2_system"
+   kind="first_nios2_system"
+   version="1.0"
+   name="first_nios2_system">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_DEVICE" value="EP3C16F484C6" />
+  <parameter name="AUTO_GENERATION_ID" value="1433946476" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/first_nios2_system.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_onchip_mem.hex"
+       type="HEX"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_onchip_mem.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.ocp"
+       type="OTHER"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.sdc"
+       type="SDC"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.v"
+       type="VERILOG_ENCRYPT"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_ic_tag_ram.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_jtag_debug_module_tck.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_ociram_default_contents.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_oci_test_bench.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_rf_ram_a.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_rf_ram_b.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_test_bench.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_jtag_uart.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_sys_clk_timer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_sysid.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_led_pio.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_master_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_slave_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_master_agent.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_slave_agent.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_burst_uncompressor.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_addr_router.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_addr_router_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_id_router.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_id_router_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_traffic_limiter.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_avalon_st_pipeline_base.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cmd_xbar_demux.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cmd_xbar_demux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cmd_xbar_mux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_demux.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_demux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_mux.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_mux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_irq_mapper.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/altera/workspace/demo/first_nios2_system.qsys" attributes="" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/altera_avalon_onchip_memory2_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/nios2_ip/altera_nios2/altera_nios2_qsys_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/altera_avalon_jtag_uart_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_timer/altera_avalon_timer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sysid_qsys/altera_avalon_sysid_qsys_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_pio/altera_avalon_pio_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_master_translator/altera_merlin_master_translator_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_master_agent/altera_merlin_master_agent_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_slave_agent/altera_merlin_slave_agent_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo.v"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_traffic_limiter/altera_merlin_traffic_limiter_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_arbitrator.sv"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_arbitrator.sv"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_arbitrator.sv"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_irq_mapper/altera_irq_mapper_hw.tcl"
+       attributes="" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 0 starting:first_nios2_system "first_nios2_system"</message>
+   <message level="Debug">Transform: PipelineBridgeSwap</message>
+   <message level="Info" culprit="pipeline_bridge_swap_transform"><![CDATA[After transform: <b>7</b> modules, <b>22</b> connections]]></message>
+   <message level="Debug">Transform: ClockCrossingBridgeSwap</message>
+   <message level="Debug">Transform: QsysBetaIPSwap</message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Info">No custom instruction connections, skipping transform </message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: TranslatorTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="merlin_translator_transform"><![CDATA[After transform: <b>15</b> modules, <b>46</b> connections]]></message>
+   <message level="Debug">Transform: IDPadTransform</message>
+   <message level="Debug">Transform: DomainTransform</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces cpu.data_master and cpu_data_master_translator.avalon_anti_master_0</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces cpu.instruction_master and cpu_instruction_master_translator.avalon_anti_master_0</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces jtag_uart_avalon_jtag_slave_translator.avalon_anti_slave_0 and jtag_uart.avalon_jtag_slave</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces onchip_mem_s1_translator.avalon_anti_slave_0 and onchip_mem.s1</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces sys_clk_timer_s1_translator.avalon_anti_slave_0 and sys_clk_timer.s1</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces sysid_control_slave_translator.avalon_anti_slave_0 and sysid.control_slave</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces led_pio_s1_translator.avalon_anti_slave_0 and led_pio.s1</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces cpu_jtag_debug_module_translator.avalon_anti_slave_0 and cpu.jtag_debug_module</message>
+   <message level="Info" culprit="merlin_domain_transform"><![CDATA[After transform: <b>30</b> modules, <b>124</b> connections]]></message>
+   <message level="Debug">Transform: RouterTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="merlin_router_transform"><![CDATA[After transform: <b>38</b> modules, <b>148</b> connections]]></message>
+   <message level="Debug">Transform: TrafficLimiterTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="merlin_traffic_limiter_transform"><![CDATA[After transform: <b>39</b> modules, <b>152</b> connections]]></message>
+   <message level="Debug">Transform: BurstTransform</message>
+   <message level="Debug">Transform: CombinedWidthTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>40</b> modules, <b>154</b> connections]]></message>
+   <message level="Debug">Transform: NetworkToSwitchTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="merlin_network_to_switch_transform"><![CDATA[After transform: <b>55</b> modules, <b>186</b> connections]]></message>
+   <message level="Debug">Transform: WidthTransform</message>
+   <message level="Debug">Transform: RouterTableTransform</message>
+   <message level="Debug">Transform: ClockCrossingTransform</message>
+   <message level="Debug">Transform: PipelineTransform</message>
+   <message level="Debug">Transform: TrafficLimiterUpdateTransform</message>
+   <message level="Info" culprit="limiter_update_transform"><![CDATA[After transform: <b>55</b> modules, <b>187</b> connections]]></message>
+   <message level="Info" culprit="merlin_mm_transform"><![CDATA[After transform: <b>55</b> modules, <b>187</b> connections]]></message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="merlin_interrupt_mapper_transform"><![CDATA[After transform: <b>56</b> modules, <b>190</b> connections]]></message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Warning" culprit="first_nios2_system">"No matching role found for rst_controller:reset_out:reset_req (reset_req)"</message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_onchip_memory2</b> "<b>submodules/first_nios2_system_onchip_mem</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_nios2_qsys</b> "<b>submodules/first_nios2_system_cpu</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_jtag_uart</b> "<b>submodules/first_nios2_system_jtag_uart</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_timer</b> "<b>submodules/first_nios2_system_sys_clk_timer</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_sysid_qsys</b> "<b>submodules/first_nios2_system_sysid</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_pio</b> "<b>submodules/first_nios2_system_led_pio</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_addr_router</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_addr_router_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_id_router</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_id_router_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_id_router</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_id_router</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_id_router</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_router</b> "<b>submodules/first_nios2_system_id_router_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_traffic_limiter</b> "<b>submodules/altera_merlin_traffic_limiter</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_cmd_xbar_demux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_cmd_xbar_demux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/first_nios2_system_cmd_xbar_mux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/first_nios2_system_cmd_xbar_mux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_demux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_demux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_demux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_demux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_demux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_demux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_mux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/first_nios2_system_rsp_xbar_mux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system"><![CDATA["<b>first_nios2_system</b>" reuses <b>altera_irq_mapper</b> "<b>submodules/first_nios2_system_irq_mapper</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 50 starting:altera_avalon_onchip_memory2 "submodules/first_nios2_system_onchip_mem"</message>
+   <message level="Info" culprit="onchip_mem">Starting RTL generation for module 'first_nios2_system_onchip_mem'</message>
+   <message level="Info" culprit="onchip_mem">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=first_nios2_system_onchip_mem --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0001_onchip_mem_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0001_onchip_mem_gen//first_nios2_system_onchip_mem_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="onchip_mem">Done RTL generation for module 'first_nios2_system_onchip_mem'</message>
+   <message level="Info" culprit="onchip_mem"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_onchip_memory2</b> "<b>onchip_mem</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 49 starting:altera_nios2_qsys "submodules/first_nios2_system_cpu"</message>
+   <message level="Info" culprit="cpu">Starting RTL generation for module 'first_nios2_system_cpu'</message>
+   <message level="Info" culprit="cpu">  Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=first_nios2_system_cpu --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0002_cpu_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0002_cpu_gen//first_nios2_system_cpu_processor_configuration.pl  --do_build_sim=0    --bogus  ]</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:01 (*) Starting Nios II generation</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:01 (*)   Checking for plaintext license.</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   LM_LICENSE_FILE environment variable is empty</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Plaintext license not found.</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Checking for encrypted license (non-evaluation).</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   LM_LICENSE_FILE environment variable is empty</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Elaborating CPU configuration settings</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Creating all objects for CPU</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:03 (*)     Pipeline frontend</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:04 (*)   Generating RTL from CPU objects</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:07 (*)   Creating encrypted RTL</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:08 (*) Done Nios II generation</message>
+   <message level="Info" culprit="cpu">Done RTL generation for module 'first_nios2_system_cpu'</message>
+   <message level="Info" culprit="cpu"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_nios2_qsys</b> "<b>cpu</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 48 starting:altera_avalon_jtag_uart "submodules/first_nios2_system_jtag_uart"</message>
+   <message level="Info" culprit="jtag_uart">Starting RTL generation for module 'first_nios2_system_jtag_uart'</message>
+   <message level="Info" culprit="jtag_uart">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=first_nios2_system_jtag_uart --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0003_jtag_uart_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0003_jtag_uart_gen//first_nios2_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="jtag_uart">Done RTL generation for module 'first_nios2_system_jtag_uart'</message>
+   <message level="Info" culprit="jtag_uart"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_jtag_uart</b> "<b>jtag_uart</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 47 starting:altera_avalon_timer "submodules/first_nios2_system_sys_clk_timer"</message>
+   <message level="Info" culprit="sys_clk_timer">Starting RTL generation for module 'first_nios2_system_sys_clk_timer'</message>
+   <message level="Info" culprit="sys_clk_timer">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=first_nios2_system_sys_clk_timer --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0004_sys_clk_timer_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0004_sys_clk_timer_gen//first_nios2_system_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="sys_clk_timer">Done RTL generation for module 'first_nios2_system_sys_clk_timer'</message>
+   <message level="Info" culprit="sys_clk_timer"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_timer</b> "<b>sys_clk_timer</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 46 starting:altera_avalon_sysid_qsys "submodules/first_nios2_system_sysid"</message>
+   <message level="Info" culprit="sysid"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_sysid_qsys</b> "<b>sysid</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 45 starting:altera_avalon_pio "submodules/first_nios2_system_led_pio"</message>
+   <message level="Info" culprit="led_pio">Starting RTL generation for module 'first_nios2_system_led_pio'</message>
+   <message level="Info" culprit="led_pio">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=first_nios2_system_led_pio --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0006_led_pio_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0006_led_pio_gen//first_nios2_system_led_pio_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="led_pio">Done RTL generation for module 'first_nios2_system_led_pio'</message>
+   <message level="Info" culprit="led_pio"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_pio</b> "<b>led_pio</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 44 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"</message>
+   <message level="Info" culprit="cpu_data_master_translator"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_master_translator</b> "<b>cpu_data_master_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 42 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"</message>
+   <message level="Info" culprit="jtag_uart_avalon_jtag_slave_translator"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>jtag_uart_avalon_jtag_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 36 starting:altera_merlin_master_agent "submodules/altera_merlin_master_agent"</message>
+   <message
+       level="Info"
+       culprit="cpu_data_master_translator_avalon_universal_master_0_agent"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_master_agent</b> "<b>cpu_data_master_translator_avalon_universal_master_0_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 34 starting:altera_merlin_slave_agent "submodules/altera_merlin_slave_agent"</message>
+   <message
+       level="Info"
+       culprit="jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_slave_agent</b> "<b>jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 33 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"</message>
+   <message
+       level="Info"
+       culprit="jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 22 starting:altera_merlin_router "submodules/first_nios2_system_addr_router"</message>
+   <message level="Info" culprit="addr_router"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 21 starting:altera_merlin_router "submodules/first_nios2_system_addr_router_001"</message>
+   <message level="Info" culprit="addr_router_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 20 starting:altera_merlin_router "submodules/first_nios2_system_id_router"</message>
+   <message level="Info" culprit="id_router"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>id_router</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 19 starting:altera_merlin_router "submodules/first_nios2_system_id_router_001"</message>
+   <message level="Info" culprit="id_router_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 14 starting:altera_merlin_traffic_limiter "submodules/altera_merlin_traffic_limiter"</message>
+   <message level="Info" culprit="limiter"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_traffic_limiter</b> "<b>limiter</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 13 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 12 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_cmd_xbar_demux"</message>
+   <message level="Info" culprit="cmd_xbar_demux"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 11 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_cmd_xbar_demux_001"</message>
+   <message level="Info" culprit="cmd_xbar_demux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 10 starting:altera_merlin_multiplexer "submodules/first_nios2_system_cmd_xbar_mux_001"</message>
+   <message level="Info" culprit="cmd_xbar_mux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>cmd_xbar_mux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 8 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_rsp_xbar_demux"</message>
+   <message level="Info" culprit="rsp_xbar_demux"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 7 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_rsp_xbar_demux_001"</message>
+   <message level="Info" culprit="rsp_xbar_demux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux_001</b>"]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 2 starting:altera_merlin_multiplexer "submodules/first_nios2_system_rsp_xbar_mux"</message>
+   <message level="Info" culprit="rsp_xbar_mux"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv</b>]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 1 starting:altera_merlin_multiplexer "submodules/first_nios2_system_rsp_xbar_mux_001"</message>
+   <message level="Info" culprit="rsp_xbar_mux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux_001</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv</b>]]></message>
+   <message level="Debug" culprit="first_nios2_system">queue size: 0 starting:altera_irq_mapper "submodules/first_nios2_system_irq_mapper"</message>
+   <message level="Info" culprit="irq_mapper"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_irq_mapper</b> "<b>irq_mapper</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_onchip_memory2:13.0.1.99.2:allowInSystemMemoryContentEditor=false,autoInitializationFileName=first_nios2_system_onchip_mem,blockType=AUTO,dataWidth=32,derived_gui_ram_block_type=Automatic,derived_init_file_name=first_nios2_system_onchip_mem.hex,derived_is_hardcopy=false,derived_set_addr_width=13,deviceFamily=Cyclone III,deviceFeatures=ADDRESS_STALL 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 COMPILER_SUPPORT 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 1 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 1 FITTER_USE_FALLING_EDGE_DELAY 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 0 HARDCOPY 0 HAS_18_BIT_MULTS 0 HAS_ACE_SUPPORT 1 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 0 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 0 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 0 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 1 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 0 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 0 HAS_DDB_FDI_SUPPORT 0 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 1 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 1 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 0 HAS_ERROR_DETECTION_SUPPORT 0 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FITTER_EARLY_TIMING_ESTIMATE_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 1 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 0 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 0 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 0 HAS_IBISO_WRITER_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_INTERFACE_PLANNER_SUPPORT 0 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 0 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LIMITED_TCL_FITTER_SUPPORT 0 HAS_LOGIC_LOCK_SUPPORT 1 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 1 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_ROUTING_SUPPORT 0 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 0 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 0 HAS_PVA_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 1 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 1 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 0 HAS_U2B2_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 1 HAS_VCCPD_POWER_RAIL 0 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 0 IFP_USE_LEGACY_IO_CHECKER 0 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 1 INSTALLED 0 IS_CONFIG_ROM 0 IS_DEFAULT_FAMILY 0 IS_HARDCOPY_FAMILY 0 LVDS_IO 0 M10K_MEMORY 0 M144K_MEMORY 0 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 1 MLAB_MEMORY 0 MRAM_MEMORY 0 NOT_LISTED 0 NO_RPE_SUPPORT 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_TDC_SUPPORT 0 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_SUPPORT 1 QFIT_IN_DEVELOPMENT 0 QMAP_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RISEFALL_SUPPORT_IS_HIDDEN 0 STRICT_TIMING_DB_CHECKS 0 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 0 SUPPORTS_CRC 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 0 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 0 TRANSCEIVER_6G_BLOCK 0 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_OCT_AUTO_CALIBRATION 0 USE_RELAX_IO_ASSIGNMENT_RULES 1 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1,dualPort=false,initMemContent=true,initializationFileName=onchip_mem.hex,instanceID=NONE,memorySize=20480,readDuringWriteMode=DONT_CARE,simAllowMRAMContentsFile=false,simMemInitOnlyFilename=0,singleClockOperation=false,slave1Latency=1,slave2Latency=1,useNonDefaultInitFile=false,useShallowMemBlocks=false,writable=true"
+   instancePathKey="first_nios2_system:.:onchip_mem"
+   kind="altera_avalon_onchip_memory2"
+   version="13.0.1.99.2"
+   name="first_nios2_system_onchip_mem">
+  <parameter name="dataWidth" value="32" />
+  <parameter name="slave2Latency" value="1" />
+  <parameter name="derived_gui_ram_block_type" value="Automatic" />
+  <parameter name="derived_set_addr_width" value="13" />
+  <parameter name="memorySize" value="20480" />
+  <parameter name="simAllowMRAMContentsFile" value="false" />
+  <parameter name="deviceFamily" value="Cyclone III" />
+  <parameter name="initializationFileName" value="onchip_mem.hex" />
+  <parameter name="simMemInitOnlyFilename" value="0" />
+  <parameter name="writable" value="true" />
+  <parameter name="instanceID" value="NONE" />
+  <parameter name="singleClockOperation" value="false" />
+  <parameter name="initMemContent" value="true" />
+  <parameter name="readDuringWriteMode" value="DONT_CARE" />
+  <parameter
+     name="derived_init_file_name"
+     value="first_nios2_system_onchip_mem.hex" />
+  <parameter name="allowInSystemMemoryContentEditor" value="false" />
+  <parameter name="dualPort" value="false" />
+  <parameter
+     name="deviceFeatures"
+     value="ADDRESS_STALL 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 COMPILER_SUPPORT 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 1 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 1 FITTER_USE_FALLING_EDGE_DELAY 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 0 HARDCOPY 0 HAS_18_BIT_MULTS 0 HAS_ACE_SUPPORT 1 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 0 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 0 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 0 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 1 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 0 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 0 HAS_DDB_FDI_SUPPORT 0 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 1 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 1 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 0 HAS_ERROR_DETECTION_SUPPORT 0 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FITTER_EARLY_TIMING_ESTIMATE_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 1 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 0 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 0 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 0 HAS_IBISO_WRITER_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_INTERFACE_PLANNER_SUPPORT 0 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 0 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LIMITED_TCL_FITTER_SUPPORT 0 HAS_LOGIC_LOCK_SUPPORT 1 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 1 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_ROUTING_SUPPORT 0 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 0 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 0 HAS_PVA_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 1 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 1 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 0 HAS_U2B2_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 1 HAS_VCCPD_POWER_RAIL 0 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 0 IFP_USE_LEGACY_IO_CHECKER 0 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 1 INSTALLED 0 IS_CONFIG_ROM 0 IS_DEFAULT_FAMILY 0 IS_HARDCOPY_FAMILY 0 LVDS_IO 0 M10K_MEMORY 0 M144K_MEMORY 0 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 1 MLAB_MEMORY 0 MRAM_MEMORY 0 NOT_LISTED 0 NO_RPE_SUPPORT 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_TDC_SUPPORT 0 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_SUPPORT 1 QFIT_IN_DEVELOPMENT 0 QMAP_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RISEFALL_SUPPORT_IS_HIDDEN 0 STRICT_TIMING_DB_CHECKS 0 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 0 SUPPORTS_CRC 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 0 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 0 TRANSCEIVER_6G_BLOCK 0 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_OCT_AUTO_CALIBRATION 0 USE_RELAX_IO_ASSIGNMENT_RULES 1 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1" />
+  <parameter name="slave1Latency" value="1" />
+  <parameter name="blockType" value="AUTO" />
+  <parameter name="useShallowMemBlocks" value="false" />
+  <parameter
+     name="autoInitializationFileName"
+     value="first_nios2_system_onchip_mem" />
+  <parameter name="derived_is_hardcopy" value="false" />
+  <parameter name="useNonDefaultInitFile" value="false" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_onchip_mem.hex"
+       type="HEX"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_onchip_mem.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/altera_avalon_onchip_memory2_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="onchip_mem" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 50 starting:altera_avalon_onchip_memory2 "submodules/first_nios2_system_onchip_mem"</message>
+   <message level="Info" culprit="onchip_mem">Starting RTL generation for module 'first_nios2_system_onchip_mem'</message>
+   <message level="Info" culprit="onchip_mem">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=first_nios2_system_onchip_mem --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0001_onchip_mem_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0001_onchip_mem_gen//first_nios2_system_onchip_mem_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="onchip_mem">Done RTL generation for module 'first_nios2_system_onchip_mem'</message>
+   <message level="Info" culprit="onchip_mem"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_onchip_memory2</b> "<b>onchip_mem</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_nios2_qsys:13.0:bht_ramBlockType=Automatic,breakAbsoluteAddr=2080,breakOffset=32,breakSlave=cpu.jtag_debug_module,clockFrequency=50000000,cpuID=0,cpuID_stored=0,cpuReset=false,customInstSlavesSystemInfo=&lt;info/&gt;,dataAddrWidth=17,dataSlaveMapParam=&lt;address-map&gt;&lt;slave name=&apos;cpu.jtag_debug_module&apos; start=&apos;0x800&apos; end=&apos;0x1000&apos; /&gt;&lt;slave name=&apos;onchip_mem.s1&apos; start=&apos;0x8000&apos; end=&apos;0xD000&apos; /&gt;&lt;slave name=&apos;sys_clk_timer.s1&apos; start=&apos;0x10000&apos; end=&apos;0x10020&apos; /&gt;&lt;slave name=&apos;led_pio.s1&apos; start=&apos;0x10020&apos; end=&apos;0x10030&apos; /&gt;&lt;slave name=&apos;sysid.control_slave&apos; start=&apos;0x10030&apos; end=&apos;0x10038&apos; /&gt;&lt;slave name=&apos;jtag_uart.avalon_jtag_slave&apos; start=&apos;0x10038&apos; end=&apos;0x10040&apos; /&gt;&lt;/address-map&gt;,dcache_bursts=false,dcache_bursts_derived=false,dcache_lineSize=32,dcache_lineSize_derived=32,dcache_numTCDM=0,dcache_omitDataMaster=false,dcache_ramBlockType=Automatic,dcache_size=2048,dcache_size_derived=2048,dcache_tagramBlockType=Automatic,dcache_victim_buf_impl=ram,debug_OCIOnchipTrace=_128,debug_assignJtagInstanceID=false,debug_debugReqSignals=false,debug_embeddedPLL=true,debug_jtagInstanceID=0,debug_level=Level1,debug_triggerArming=true,deviceFamilyName=Cyclone III,deviceFeaturesSystemInfo=ADDRESS_STALL 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 COMPILER_SUPPORT 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 1 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 1 FITTER_USE_FALLING_EDGE_DELAY 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 0 HARDCOPY 0 HAS_18_BIT_MULTS 0 HAS_ACE_SUPPORT 1 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 0 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 0 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 0 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 1 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 0 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 0 HAS_DDB_FDI_SUPPORT 0 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 1 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 1 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 0 HAS_ERROR_DETECTION_SUPPORT 0 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FITTER_EARLY_TIMING_ESTIMATE_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 1 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 0 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 0 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 0 HAS_IBISO_WRITER_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_INTERFACE_PLANNER_SUPPORT 0 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 0 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LIMITED_TCL_FITTER_SUPPORT 0 HAS_LOGIC_LOCK_SUPPORT 1 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 1 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_ROUTING_SUPPORT 0 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 0 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 0 HAS_PVA_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 1 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 1 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 0 HAS_U2B2_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 1 HAS_VCCPD_POWER_RAIL 0 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 0 IFP_USE_LEGACY_IO_CHECKER 0 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 1 INSTALLED 0 IS_CONFIG_ROM 0 IS_DEFAULT_FAMILY 0 IS_HARDCOPY_FAMILY 0 LVDS_IO 0 M10K_MEMORY 0 M144K_MEMORY 0 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 1 MLAB_MEMORY 0 MRAM_MEMORY 0 NOT_LISTED 0 NO_RPE_SUPPORT 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_TDC_SUPPORT 0 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_SUPPORT 1 QFIT_IN_DEVELOPMENT 0 QMAP_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RISEFALL_SUPPORT_IS_HIDDEN 0 STRICT_TIMING_DB_CHECKS 0 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 0 SUPPORTS_CRC 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 0 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 0 TRANSCEIVER_6G_BLOCK 0 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_OCT_AUTO_CALIBRATION 0 USE_RELAX_IO_ASSIGNMENT_RULES 1 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1,exceptionAbsoluteAddr=32800,exceptionOffset=32,exceptionSlave=onchip_mem.s1,icache_burstType=None,icache_numTCIM=0,icache_ramBlockType=Automatic,icache_size=2048,icache_tagramBlockType=Automatic,impl=Small,instAddrWidth=16,instSlaveMapParam=&lt;address-map&gt;&lt;slave name=&apos;cpu.jtag_debug_module&apos; start=&apos;0x800&apos; end=&apos;0x1000&apos; /&gt;&lt;slave name=&apos;onchip_mem.s1&apos; start=&apos;0x8000&apos; end=&apos;0xD000&apos; /&gt;&lt;/address-map&gt;,internalIrqMaskSystemInfo=65538,is_hardcopy_compatible=false,manuallyAssignCpuID=true,mmu_TLBMissExcAbsAddr=0,mmu_TLBMissExcOffset=0,mmu_TLBMissExcSlave=None,mmu_autoAssignTlbPtrSz=true,mmu_enabled=false,mmu_processIDNumBits=8,mmu_ramBlockType=Automatic,mmu_tlbNumWays=16,mmu_tlbPtrSz=7,mmu_udtlbNumEntries=6,mmu_uitlbNumEntries=4,mpu_enabled=false,mpu_minDataRegionSize=12,mpu_minInstRegionSize=12,mpu_numOfDataRegion=8,mpu_numOfInstRegion=8,mpu_useLimit=false,muldiv_divider=false,muldiv_multiplierType=NoneSmall,ocimem_ramBlockType=Automatic,regfile_ramBlockType=Automatic,resetAbsoluteAddr=32768,resetOffset=0,resetSlave=onchip_mem.s1,setting_HBreakTest=false,setting_HDLSimCachesCleared=true,setting_activateModelChecker=false,setting_activateMonitors=true,setting_activateTestEndChecker=false,setting_activateTrace=true,setting_allowFullAddressRange=false,setting_alwaysEncrypt=true,setting_asic_enabled=false,setting_asic_synopsys_translate_on_off=false,setting_avalonDebugPortPresent=false,setting_bhtIndexPcOnly=false,setting_bhtPtrSz=8,setting_bigEndian=false,setting_bit31BypassDCache=true,setting_branchPredictionType=Automatic,setting_clearXBitsLDNonBypass=true,setting_debugSimGen=false,setting_ecc_present=false,setting_exportPCB=false,setting_export_large_RAMs=false,setting_exportvectors=false,setting_extraExceptionInfo=false,setting_fullWaveformSignals=false,setting_illegalInstructionsTrap=false,setting_illegalMemAccessDetection=false,setting_interruptControllerType=Internal,setting_oci_export_jtag_signals=false,setting_perfCounterWidth=32,setting_performanceCounter=false,setting_preciseDivisionErrorException=false,setting_preciseIllegalMemAccessException=false,setting_preciseSlaveAccessErrorException=false,setting_shadowRegisterSets=0,setting_showInternalSettings=false,setting_showUnpublishedSettings=false,tightlyCoupledDataMaster0AddrWidth=1,tightlyCoupledDataMaster0MapParam=,tightlyCoupledDataMaster1AddrWidth=1,tightlyCoupledDataMaster1MapParam=,tightlyCoupledDataMaster2AddrWidth=1,tightlyCoupledDataMaster2MapParam=,tightlyCoupledDataMaster3AddrWidth=1,tightlyCoupledDataMaster3MapParam=,tightlyCoupledInstructionMaster0AddrWidth=1,tightlyCoupledInstructionMaster0MapParam=,tightlyCoupledInstructionMaster1AddrWidth=1,tightlyCoupledInstructionMaster1MapParam=,tightlyCoupledInstructionMaster2AddrWidth=1,tightlyCoupledInstructionMaster2MapParam=,tightlyCoupledInstructionMaster3AddrWidth=1,tightlyCoupledInstructionMaster3MapParam=,translate_off= &quot;synthesis translate_off&quot; ,translate_on= &quot;synthesis translate_on&quot;  ,userDefinedSettings="
+   instancePathKey="first_nios2_system:.:cpu"
+   kind="altera_nios2_qsys"
+   version="13.0"
+   name="first_nios2_system_cpu">
+  <parameter name="muldiv_divider" value="false" />
+  <parameter name="exceptionOffset" value="32" />
+  <parameter name="setting_shadowRegisterSets" value="0" />
+  <parameter name="setting_activateMonitors" value="true" />
+  <parameter name="setting_preciseSlaveAccessErrorException" value="false" />
+  <parameter name="tightlyCoupledDataMaster3MapParam" value="" />
+  <parameter name="setting_branchPredictionType" value="Automatic" />
+  <parameter name="setting_bhtPtrSz" value="8" />
+  <parameter name="dcache_ramBlockType" value="Automatic" />
+  <parameter name="tightlyCoupledDataMaster0MapParam" value="" />
+  <parameter name="tightlyCoupledDataMaster2AddrWidth" value="1" />
+  <parameter name="is_hardcopy_compatible" value="false" />
+  <parameter name="setting_alwaysEncrypt" value="true" />
+  <parameter name="icache_numTCIM" value="0" />
+  <parameter name="icache_size" value="2048" />
+  <parameter name="internalIrqMaskSystemInfo" value="65538" />
+  <parameter name="translate_off" value=" &quot;synthesis translate_off&quot; " />
+  <parameter name="dcache_numTCDM" value="0" />
+  <parameter name="breakSlave" value="cpu.jtag_debug_module" />
+  <parameter name="dcache_size" value="2048" />
+  <parameter name="userDefinedSettings" value="" />
+  <parameter name="cpuID_stored" value="0" />
+  <parameter name="tightlyCoupledDataMaster2MapParam" value="" />
+  <parameter name="mmu_autoAssignTlbPtrSz" value="true" />
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="setting_allowFullAddressRange" value="false" />
+  <parameter name="setting_illegalInstructionsTrap" value="false" />
+  <parameter name="mmu_tlbPtrSz" value="7" />
+  <parameter name="setting_avalonDebugPortPresent" value="false" />
+  <parameter name="mmu_TLBMissExcOffset" value="0" />
+  <parameter name="breakOffset" value="32" />
+  <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
+  <parameter
+     name="deviceFeaturesSystemInfo"
+     value="ADDRESS_STALL 1 CELL_LEVEL_BACK_ANNOTATION_DISABLED 0 COMPILER_SUPPORT 1 DSP 0 DSP_SHIFTER_BLOCK 0 DUMP_ASM_LAB_BITS_FOR_POWER 1 EMUL 1 ENABLE_ADVANCED_IO_ANALYSIS_GUI_FEATURES 1 EPCS 1 ESB 0 FAKE1 0 FAKE2 0 FAKE3 0 FAMILY_LEVEL_INSTALLATION_ONLY 1 FITTER_USE_FALLING_EDGE_DELAY 1 GENERATE_DC_ON_CURRENT_WARNING_FOR_INTERNAL_CLAMPING_DIODE 0 HARDCOPY 0 HAS_18_BIT_MULTS 0 HAS_ACE_SUPPORT 1 HAS_ADJUSTABLE_OUTPUT_IO_TIMING_MEAS_POINT 1 HAS_ADVANCED_IO_INVERTED_CORNER 0 HAS_ADVANCED_IO_POWER_SUPPORT 1 HAS_ADVANCED_IO_TIMING_SUPPORT 1 HAS_ALM_SUPPORT 0 HAS_ATOM_AND_ROUTING_POWER_MODELED_TOGETHER 0 HAS_AUTO_DERIVE_CLOCK_UNCERTAINTY_SUPPORT 0 HAS_AUTO_FIT_SUPPORT 1 HAS_BALANCED_OPT_TECHNIQUE_SUPPORT 1 HAS_BENEFICIAL_SKEW_SUPPORT 1 HAS_BITLEVEL_DRIVE_STRENGTH_CONTROL 1 HAS_BSDL_FILE_GENERATION 0 HAS_CGA_SUPPORT 1 HAS_CHECK_NETLIST_SUPPORT 0 HAS_CLOCK_REGION_CHECKER_ENABLED 1 HAS_CORE_JUNCTION_TEMP_DERATING 0 HAS_CROSSTALK_SUPPORT 0 HAS_CUSTOM_REGION_SUPPORT 1 HAS_DAP_JTAG_FROM_HPS 0 HAS_DATA_DRIVEN_ACVQ_HSSI_SUPPORT 0 HAS_DDB_FDI_SUPPORT 0 HAS_DESIGN_ANALYZER_SUPPORT 1 HAS_DETAILED_IO_RAIL_POWER_MODEL 1 HAS_DETAILED_LEIM_STATIC_POWER_MODEL 1 HAS_DETAILED_LE_POWER_MODEL 1 HAS_DETAILED_ROUTING_MUX_STATIC_POWER_MODEL 1 HAS_DETAILED_THERMAL_CIRCUIT_PARAMETER_SUPPORT 1 HAS_DEVICE_MIGRATION_SUPPORT 1 HAS_DIAGONAL_MIGRATION_SUPPORT 0 HAS_EMIF_TOOLKIT_SUPPORT 0 HAS_ERROR_DETECTION_SUPPORT 0 HAS_FAMILY_VARIANT_MIGRATION_SUPPORT 0 HAS_FANOUT_FREE_NODE_SUPPORT 1 HAS_FAST_FIT_SUPPORT 1 HAS_FITTER_EARLY_TIMING_ESTIMATE_SUPPORT 1 HAS_FITTER_ECO_SUPPORT 1 HAS_FIT_NETLIST_OPT_RETIME_SUPPORT 1 HAS_FIT_NETLIST_OPT_SUPPORT 1 HAS_FORMAL_VERIFICATION_SUPPORT 1 HAS_FPGA_XCHANGE_SUPPORT 1 HAS_FSAC_LUTRAM_REGISTER_PACKING_SUPPORT 0 HAS_FULL_DAT_MIN_TIMING_SUPPORT 1 HAS_FULL_INCREMENTAL_DESIGN_SUPPORT 1 HAS_FUNCTIONAL_SIMULATION_SUPPORT 1 HAS_FUNCTIONAL_VERILOG_SIMULATION_SUPPORT 0 HAS_FUNCTIONAL_VHDL_SIMULATION_SUPPORT 0 HAS_GLITCH_FILTERING_SUPPORT 1 HAS_HC_READY_SUPPORT 0 HAS_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_HOLD_TIME_AVOIDANCE_ACROSS_CLOCK_SPINE_SUPPORT 1 HAS_HSPICE_WRITER_SUPPORT 1 HAS_HSSI_POWER_CALCULATOR 0 HAS_IBISO_WRITER_SUPPORT 1 HAS_INCREMENTAL_DAT_SUPPORT 1 HAS_INCREMENTAL_SYNTHESIS_SUPPORT 1 HAS_INTERFACE_PLANNER_SUPPORT 0 HAS_IO_ASSIGNMENT_ANALYSIS_SUPPORT 1 HAS_IO_DECODER 0 HAS_IO_PLACEMENT_OPTIMIZATION_SUPPORT 1 HAS_IO_SMART_RECOMPILE_SUPPORT 0 HAS_JITTER_SUPPORT 1 HAS_JTAG_SLD_HUB_SUPPORT 1 HAS_LIMITED_TCL_FITTER_SUPPORT 0 HAS_LOGIC_LOCK_SUPPORT 1 HAS_MICROPROCESSOR 0 HAS_MIF_SMART_COMPILE_SUPPORT 1 HAS_MINMAX_TIMING_MODELING_SUPPORT 1 HAS_MIN_TIMING_ANALYSIS_SUPPORT 1 HAS_MUX_RESTRUCTURE_SUPPORT 1 HAS_NEW_HC_FLOW_SUPPORT 0 HAS_NEW_SERDES_MAX_RESOURCE_COUNT_REPORTING_SUPPORT 1 HAS_NEW_VPR_SUPPORT 1 HAS_NONSOCKET_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_NO_HARDBLOCK_PARTITION_SUPPORT 0 HAS_NO_JTAG_USERCODE_SUPPORT 0 HAS_OPERATING_SETTINGS_AND_CONDITIONS_REPORTING_SUPPORT 1 HAS_PAD_LOCATION_ASSIGNMENT_SUPPORT 0 HAS_PARTIAL_RECONFIG_SUPPORT 0 HAS_PHYSICAL_NETLIST_OUTPUT 0 HAS_PHYSICAL_ROUTING_SUPPORT 0 HAS_PIN_SPECIFIC_VOLTAGE_SUPPORT 1 HAS_PLDM_REF_SUPPORT 1 HAS_POWER_ESTIMATION_SUPPORT 1 HAS_PRELIMINARY_CLOCK_UNCERTAINTY_NUMBERS 0 HAS_PRE_FITTER_FPP_SUPPORT 0 HAS_PRE_FITTER_LUTRAM_NETLIST_CHECKER_ENABLED 0 HAS_PVA_SUPPORT 1 HAS_RCF_SUPPORT 1 HAS_RCF_SUPPORT_FOR_DEBUGGING 0 HAS_RED_BLACK_SEPARATION_SUPPORT 0 HAS_RE_LEVEL_TIMING_GRAPH_SUPPORT 1 HAS_RISEFALL_DELAY_SUPPORT 1 HAS_SIGNAL_PROBE_SUPPORT 1 HAS_SIGNAL_TAP_SUPPORT 1 HAS_SIMULATOR_SUPPORT 1 HAS_SPLIT_IO_SUPPORT 1 HAS_SPLIT_LC_SUPPORT 1 HAS_SYNTH_FSYN_NETLIST_OPT_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_RETIME_SUPPORT 1 HAS_SYNTH_NETLIST_OPT_SUPPORT 1 HAS_TCL_FITTER_SUPPORT 0 HAS_TECHNOLOGY_MIGRATION_SUPPORT 0 HAS_TEMPLATED_REGISTER_PACKING_SUPPORT 1 HAS_TIME_BORROWING_SUPPORT 0 HAS_TIMING_DRIVEN_SYNTHESIS_SUPPORT 1 HAS_TIMING_INFO_SUPPORT 1 HAS_TIMING_OPERATING_CONDITIONS 1 HAS_TIMING_SIMULATION_SUPPORT 1 HAS_TITAN_BASED_MAC_REGISTER_PACKER_SUPPORT 0 HAS_U2B2_SUPPORT 0 HAS_USER_HIGH_SPEED_LOW_POWER_TILE_SUPPORT 0 HAS_USE_FITTER_INFO_SUPPORT 1 HAS_VCCPD_POWER_RAIL 0 HAS_VERTICAL_MIGRATION_SUPPORT 1 HAS_VIEWDRAW_SYMBOL_SUPPORT 0 HAS_VIO_SUPPORT 1 HAS_VIRTUAL_DEVICES 0 HAS_WYSIWYG_DFFEAS_SUPPORT 1 HAS_XIBISO_WRITER_SUPPORT 0 IFP_USE_LEGACY_IO_CHECKER 0 INCREMENTAL_DESIGN_SUPPORTS_COMPATIBLE_CONSTRAINTS 1 INSTALLED 0 IS_CONFIG_ROM 0 IS_DEFAULT_FAMILY 0 IS_HARDCOPY_FAMILY 0 LVDS_IO 0 M10K_MEMORY 0 M144K_MEMORY 0 M20K_MEMORY 0 M4K_MEMORY 0 M512_MEMORY 0 M9K_MEMORY 1 MLAB_MEMORY 0 MRAM_MEMORY 0 NOT_LISTED 0 NO_RPE_SUPPORT 0 NO_SUPPORT_FOR_LOGICLOCK_CONTENT_BACK_ANNOTATION 1 NO_SUPPORT_FOR_STA_CLOCK_UNCERTAINTY_CHECK 0 NO_TDC_SUPPORT 0 POSTFIT_BAK_DATABASE_EXPORT_ENABLED 1 POSTMAP_BAK_DATABASE_EXPORT_ENABLED 1 PROGRAMMER_SUPPORT 1 QFIT_IN_DEVELOPMENT 0 QMAP_IN_DEVELOPMENT 0 RAM_LOGICAL_NAME_CHECKING_IN_CUT_ENABLED 1 REPORTS_METASTABILITY_MTBF 1 REQUIRES_INSTALLATION_PATCH 0 REQUIRES_LIST_OF_TEMPERATURE_AND_VOLTAGE_OPERATING_CONDITIONS 1 RESERVES_SIGNAL_PROBE_PINS 0 RESOLVE_MAX_FANOUT_EARLY 1 RESOLVE_MAX_FANOUT_LATE 0 RESPECTS_FIXED_SIZED_LOCKED_LOCATION_LOGICLOCK 1 RESTRICTED_USER_SELECTION 0 RISEFALL_SUPPORT_IS_HIDDEN 0 STRICT_TIMING_DB_CHECKS 0 SUPPORTS_ADDITIONAL_OPTIONS_FOR_UNUSED_IO 0 SUPPORTS_CRC 1 SUPPORTS_DIFFERENTIAL_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_DSP_BALANCING_BACK_ANNOTATION 0 SUPPORTS_GENERATION_OF_EARLY_POWER_ESTIMATOR_FILE 1 SUPPORTS_GLOBAL_SIGNAL_BACK_ANNOTATION 0 SUPPORTS_MAC_CHAIN_OUT_ADDER 0 SUPPORTS_RAM_PACKING_BACK_ANNOTATION 0 SUPPORTS_REG_PACKING_BACK_ANNOTATION 0 SUPPORTS_SIGNALPROBE_REGISTER_PIPELINING 1 SUPPORTS_SINGLE_ENDED_AIOT_BOARD_TRACE_MODEL 1 SUPPORTS_USER_MANUAL_LOGIC_DUPLICATION 1 TMV_RUN_CUSTOMIZABLE_VIEWER 1 TMV_RUN_INTERNAL_DETAILS 1 TMV_RUN_INTERNAL_DETAILS_ON_IO 0 TMV_RUN_INTERNAL_DETAILS_ON_IOBUF 1 TMV_RUN_INTERNAL_DETAILS_ON_LCELL 0 TMV_RUN_INTERNAL_DETAILS_ON_LRAM 0 TRANSCEIVER_3G_BLOCK 0 TRANSCEIVER_6G_BLOCK 0 USES_ACV_FOR_FLED 1 USES_ADB_FOR_BACK_ANNOTATION 1 USES_ALTERA_LNSIM 0 USES_ASIC_ROUTING_POWER_CALCULATOR 0 USES_DATA_DRIVEN_PLL_COMPUTATION_UTIL 1 USES_DEV 1 USES_ICP_FOR_ECO_FITTER 0 USES_LIBERTY_TIMING 0 USES_POWER_SIGNAL_ACTIVITIES 1 USES_THIRD_GENERATION_TIMING_MODELS_TIS 1 USES_U2B2_TIMING_MODELS 0 USE_ADVANCED_IO_POWER_BY_DEFAULT 1 USE_ADVANCED_IO_TIMING_BY_DEFAULT 1 USE_BASE_FAMILY_DDB_PATH 0 USE_OCT_AUTO_CALIBRATION 0 USE_RELAX_IO_ASSIGNMENT_RULES 1 USE_RISEFALL_ONLY 1 USE_SEPARATE_LIST_FOR_TECH_MIGRATION 0 USE_SINGLE_COMPILER_PASS_PLL_MIF_FILE_WRITER 1 USE_TITAN_IO_BASED_IO_REGISTER_PACKER_UTIL 0 WYSIWYG_BUS_WIDTH_CHECKING_IN_CUT_ENABLED 1" />
+  <parameter name="dcache_bursts" value="false" />
+  <parameter name="setting_exportPCB" value="false" />
+  <parameter name="debug_jtagInstanceID" value="0" />
+  <parameter name="setting_HDLSimCachesCleared" value="true" />
+  <parameter name="tightlyCoupledInstructionMaster3MapParam" value="" />
+  <parameter name="setting_interruptControllerType" value="Internal" />
+  <parameter name="tightlyCoupledInstructionMaster2MapParam" value="" />
+  <parameter name="mpu_minDataRegionSize" value="12" />
+  <parameter name="tightlyCoupledInstructionMaster0AddrWidth" value="1" />
+  <parameter name="dcache_victim_buf_impl" value="ram" />
+  <parameter name="resetSlave" value="onchip_mem.s1" />
+  <parameter name="regfile_ramBlockType" value="Automatic" />
+  <parameter name="mpu_numOfInstRegion" value="8" />
+  <parameter name="setting_performanceCounter" value="false" />
+  <parameter name="tightlyCoupledInstructionMaster1MapParam" value="" />
+  <parameter name="setting_bit31BypassDCache" value="true" />
+  <parameter name="tightlyCoupledDataMaster0AddrWidth" value="1" />
+  <parameter name="mmu_processIDNumBits" value="8" />
+  <parameter name="mmu_ramBlockType" value="Automatic" />
+  <parameter name="setting_showInternalSettings" value="false" />
+  <parameter name="mmu_tlbNumWays" value="16" />
+  <parameter name="dataAddrWidth" value="17" />
+  <parameter name="exceptionSlave" value="onchip_mem.s1" />
+  <parameter name="setting_exportvectors" value="false" />
+  <parameter name="setting_showUnpublishedSettings" value="false" />
+  <parameter name="setting_extraExceptionInfo" value="false" />
+  <parameter name="setting_ecc_present" value="false" />
+  <parameter name="resetOffset" value="0" />
+  <parameter name="debug_level" value="Level1" />
+  <parameter name="setting_perfCounterWidth" value="32" />
+  <parameter name="dcache_bursts_derived" value="false" />
+  <parameter name="mmu_udtlbNumEntries" value="6" />
+  <parameter name="setting_fullWaveformSignals" value="false" />
+  <parameter name="setting_activateTestEndChecker" value="false" />
+  <parameter name="translate_on" value=" &quot;synthesis translate_on&quot;  " />
+  <parameter name="cpuID" value="0" />
+  <parameter name="debug_embeddedPLL" value="true" />
+  <parameter name="mmu_enabled" value="false" />
+  <parameter name="setting_asic_synopsys_translate_on_off" value="false" />
+  <parameter name="mpu_numOfDataRegion" value="8" />
+  <parameter name="setting_oci_export_jtag_signals" value="false" />
+  <parameter name="bht_ramBlockType" value="Automatic" />
+  <parameter name="tightlyCoupledInstructionMaster0MapParam" value="" />
+  <parameter name="icache_burstType" value="None" />
+  <parameter
+     name="dataSlaveMapParam"
+     value="&lt;address-map&gt;&lt;slave name=&apos;cpu.jtag_debug_module&apos; start=&apos;0x800&apos; end=&apos;0x1000&apos; /&gt;&lt;slave name=&apos;onchip_mem.s1&apos; start=&apos;0x8000&apos; end=&apos;0xD000&apos; /&gt;&lt;slave name=&apos;sys_clk_timer.s1&apos; start=&apos;0x10000&apos; end=&apos;0x10020&apos; /&gt;&lt;slave name=&apos;led_pio.s1&apos; start=&apos;0x10020&apos; end=&apos;0x10030&apos; /&gt;&lt;slave name=&apos;sysid.control_slave&apos; start=&apos;0x10030&apos; end=&apos;0x10038&apos; /&gt;&lt;slave name=&apos;jtag_uart.avalon_jtag_slave&apos; start=&apos;0x10038&apos; end=&apos;0x10040&apos; /&gt;&lt;/address-map&gt;" />
+  <parameter name="tightlyCoupledDataMaster1MapParam" value="" />
+  <parameter name="dcache_size_derived" value="2048" />
+  <parameter name="tightlyCoupledDataMaster1AddrWidth" value="1" />
+  <parameter name="setting_bhtIndexPcOnly" value="false" />
+  <parameter name="mpu_enabled" value="false" />
+  <parameter name="setting_bigEndian" value="false" />
+  <parameter name="setting_export_large_RAMs" value="false" />
+  <parameter name="mmu_TLBMissExcAbsAddr" value="0" />
+  <parameter name="setting_HBreakTest" value="false" />
+  <parameter name="setting_preciseDivisionErrorException" value="false" />
+  <parameter name="setting_clearXBitsLDNonBypass" value="true" />
+  <parameter name="mpu_minInstRegionSize" value="12" />
+  <parameter name="debug_assignJtagInstanceID" value="false" />
+  <parameter name="mmu_uitlbNumEntries" value="4" />
+  <parameter name="setting_preciseIllegalMemAccessException" value="false" />
+  <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
+  <parameter name="debug_debugReqSignals" value="false" />
+  <parameter name="setting_illegalMemAccessDetection" value="false" />
+  <parameter name="mpu_useLimit" value="false" />
+  <parameter name="dcache_lineSize_derived" value="32" />
+  <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
+  <parameter name="exceptionAbsoluteAddr" value="32800" />
+  <parameter name="dcache_tagramBlockType" value="Automatic" />
+  <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
+  <parameter name="ocimem_ramBlockType" value="Automatic" />
+  <parameter name="icache_tagramBlockType" value="Automatic" />
+  <parameter name="tightlyCoupledDataMaster3AddrWidth" value="1" />
+  <parameter name="setting_activateModelChecker" value="false" />
+  <parameter name="dcache_lineSize" value="32" />
+  <parameter
+     name="instSlaveMapParam"
+     value="&lt;address-map&gt;&lt;slave name=&apos;cpu.jtag_debug_module&apos; start=&apos;0x800&apos; end=&apos;0x1000&apos; /&gt;&lt;slave name=&apos;onchip_mem.s1&apos; start=&apos;0x8000&apos; end=&apos;0xD000&apos; /&gt;&lt;/address-map&gt;" />
+  <parameter name="instAddrWidth" value="16" />
+  <parameter name="cpuReset" value="false" />
+  <parameter name="setting_debugSimGen" value="false" />
+  <parameter name="resetAbsoluteAddr" value="32768" />
+  <parameter name="deviceFamilyName" value="Cyclone III" />
+  <parameter name="mmu_TLBMissExcSlave" value="None" />
+  <parameter name="impl" value="Small" />
+  <parameter name="icache_ramBlockType" value="Automatic" />
+  <parameter name="debug_triggerArming" value="true" />
+  <parameter name="debug_OCIOnchipTrace" value="_128" />
+  <parameter name="breakAbsoluteAddr" value="2080" />
+  <parameter name="dcache_omitDataMaster" value="false" />
+  <parameter name="muldiv_multiplierType" value="NoneSmall" />
+  <parameter name="setting_activateTrace" value="true" />
+  <parameter name="setting_asic_enabled" value="false" />
+  <parameter name="manuallyAssignCpuID" value="true" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.ocp"
+       type="OTHER"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.sdc"
+       type="SDC"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.v"
+       type="VERILOG_ENCRYPT"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_ic_tag_ram.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_jtag_debug_module_sysclk.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_jtag_debug_module_tck.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_jtag_debug_module_wrapper.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_ociram_default_contents.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_oci_test_bench.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_rf_ram_a.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_rf_ram_b.mif"
+       type="MIF"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_test_bench.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/nios2_ip/altera_nios2/altera_nios2_qsys_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="cpu" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 49 starting:altera_nios2_qsys "submodules/first_nios2_system_cpu"</message>
+   <message level="Info" culprit="cpu">Starting RTL generation for module 'first_nios2_system_cpu'</message>
+   <message level="Info" culprit="cpu">  Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=first_nios2_system_cpu --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0002_cpu_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0002_cpu_gen//first_nios2_system_cpu_processor_configuration.pl  --do_build_sim=0    --bogus  ]</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:01 (*) Starting Nios II generation</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:01 (*)   Checking for plaintext license.</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   LM_LICENSE_FILE environment variable is empty</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Plaintext license not found.</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Checking for encrypted license (non-evaluation).</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   LM_LICENSE_FILE environment variable is empty</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Elaborating CPU configuration settings</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:02 (*)   Creating all objects for CPU</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:03 (*)     Pipeline frontend</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:04 (*)   Generating RTL from CPU objects</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:07 (*)   Creating encrypted RTL</message>
+   <message level="Info" culprit="cpu"># 2015.06.10 16:28:08 (*) Done Nios II generation</message>
+   <message level="Info" culprit="cpu">Done RTL generation for module 'first_nios2_system_cpu'</message>
+   <message level="Info" culprit="cpu"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_nios2_qsys</b> "<b>cpu</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_jtag_uart:13.0.1.99.2:allowMultipleConnections=false,avalonSpec=2.0,enableInteractiveInput=false,enableInteractiveOutput=false,hubInstanceID=0,legacySignalAllow=false,readBufferDepth=64,readIRQThreshold=8,simInputCharacterStream=,simInteractiveOptions=NO_INTERACTIVE_WINDOWS,useRegistersForReadBuffer=false,useRegistersForWriteBuffer=false,useRelativePathForSimFile=false,writeBufferDepth=64,writeIRQThreshold=8"
+   instancePathKey="first_nios2_system:.:jtag_uart"
+   kind="altera_avalon_jtag_uart"
+   version="13.0.1.99.2"
+   name="first_nios2_system_jtag_uart">
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="useRegistersForReadBuffer" value="false" />
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="simInteractiveOptions" value="NO_INTERACTIVE_WINDOWS" />
+  <parameter name="useRegistersForWriteBuffer" value="false" />
+  <parameter name="legacySignalAllow" value="false" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="enableInteractiveOutput" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="enableInteractiveInput" value="false" />
+  <parameter name="writeIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_jtag_uart.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/altera_avalon_jtag_uart_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="jtag_uart" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 48 starting:altera_avalon_jtag_uart "submodules/first_nios2_system_jtag_uart"</message>
+   <message level="Info" culprit="jtag_uart">Starting RTL generation for module 'first_nios2_system_jtag_uart'</message>
+   <message level="Info" culprit="jtag_uart">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=first_nios2_system_jtag_uart --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0003_jtag_uart_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0003_jtag_uart_gen//first_nios2_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="jtag_uart">Done RTL generation for module 'first_nios2_system_jtag_uart'</message>
+   <message level="Info" culprit="jtag_uart"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_jtag_uart</b> "<b>jtag_uart</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_timer:13.0.1.99.2:alwaysRun=false,counterSize=32,fixedPeriod=false,loadValue=49999,mult=0,period=1,periodUnits=MSEC,periodUnitsString=ms,resetOutput=false,slave_address_width=3,snapshot=true,systemFrequency=50000000,ticksPerSec=1000,timeoutPulseOutput=false,timerPreset=FULL_FEATURED,valueInSecond=0"
+   instancePathKey="first_nios2_system:.:sys_clk_timer"
+   kind="altera_avalon_timer"
+   version="13.0.1.99.2"
+   name="first_nios2_system_sys_clk_timer">
+  <parameter name="alwaysRun" value="false" />
+  <parameter name="mult" value="0" />
+  <parameter name="counterSize" value="32" />
+  <parameter name="periodUnits" value="MSEC" />
+  <parameter name="ticksPerSec" value="1000" />
+  <parameter name="snapshot" value="true" />
+  <parameter name="periodUnitsString" value="ms" />
+  <parameter name="systemFrequency" value="50000000" />
+  <parameter name="period" value="1" />
+  <parameter name="loadValue" value="49999" />
+  <parameter name="timeoutPulseOutput" value="false" />
+  <parameter name="resetOutput" value="false" />
+  <parameter name="valueInSecond" value="0" />
+  <parameter name="slave_address_width" value="3" />
+  <parameter name="fixedPeriod" value="false" />
+  <parameter name="timerPreset" value="FULL_FEATURED" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_sys_clk_timer.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_timer/altera_avalon_timer_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="sys_clk_timer" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 47 starting:altera_avalon_timer "submodules/first_nios2_system_sys_clk_timer"</message>
+   <message level="Info" culprit="sys_clk_timer">Starting RTL generation for module 'first_nios2_system_sys_clk_timer'</message>
+   <message level="Info" culprit="sys_clk_timer">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=first_nios2_system_sys_clk_timer --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0004_sys_clk_timer_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0004_sys_clk_timer_gen//first_nios2_system_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="sys_clk_timer">Done RTL generation for module 'first_nios2_system_sys_clk_timer'</message>
+   <message level="Info" culprit="sys_clk_timer"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_timer</b> "<b>sys_clk_timer</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_sysid_qsys:13.0:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone III,id=0,timestamp=1433946476"
+   instancePathKey="first_nios2_system:.:sysid"
+   kind="altera_avalon_sysid_qsys"
+   version="13.0"
+   name="first_nios2_system_sysid">
+  <parameter name="timestamp" value="1433946476" />
+  <parameter name="id" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_sysid.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sysid_qsys/altera_avalon_sysid_qsys_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="sysid" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 46 starting:altera_avalon_sysid_qsys "submodules/first_nios2_system_sysid"</message>
+   <message level="Info" culprit="sysid"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_sysid_qsys</b> "<b>sysid</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_pio:13.0.1.99.2:bitClearingEdgeCapReg=false,bitModifyingOutReg=false,captureEdge=false,clockRate=50000000,derived_capture=false,derived_do_test_bench_wiring=false,derived_edge_type=NONE,derived_has_in=false,derived_has_irq=false,derived_has_out=true,derived_has_tri=false,derived_irq_type=NONE,direction=Output,edgeType=RISING,generateIRQ=false,irqType=LEVEL,resetValue=0,simDoTestBenchWiring=false,simDrivenValue=0,width=8"
+   instancePathKey="first_nios2_system:.:led_pio"
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   name="first_nios2_system_led_pio">
+  <parameter name="derived_capture" value="false" />
+  <parameter name="derived_do_test_bench_wiring" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="direction" value="Output" />
+  <parameter name="width" value="8" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="derived_edge_type" value="NONE" />
+  <parameter name="derived_has_in" value="false" />
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="derived_irq_type" value="NONE" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="derived_has_irq" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="derived_has_out" value="true" />
+  <parameter name="derived_has_tri" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_led_pio.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_pio/altera_avalon_pio_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="led_pio" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 45 starting:altera_avalon_pio "submodules/first_nios2_system_led_pio"</message>
+   <message level="Info" culprit="led_pio">Starting RTL generation for module 'first_nios2_system_led_pio'</message>
+   <message level="Info" culprit="led_pio">  Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=first_nios2_system_led_pio --dir=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0006_led_pio_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/PATRIC~1/AppData/Local/Temp/alt6596_2955436305624563379.dir/0006_led_pio_gen//first_nios2_system_led_pio_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="led_pio">Done RTL generation for module 'first_nios2_system_led_pio'</message>
+   <message level="Info" culprit="led_pio"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_pio</b> "<b>led_pio</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_master_translator:13.0:AUTO_CLK_CLOCK_RATE=-1,AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=1,AV_ADDRESS_W=17,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=1,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=4,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_W=32,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=64,AV_READLATENCY=0,AV_READ_WAIT=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_SETUP_WAIT=0,AV_SYMBOLS_PER_WORD=4,AV_WRITE_WAIT=0,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=17,UAV_BURSTCOUNT_W=3,UAV_CONSTANT_BURST_BEHAVIOR=0,USE_ADDRESS=1,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=1,USE_CHIPSELECT=0,USE_CLKEN=0,USE_DEBUGACCESS=1,USE_LOCK=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=0,USE_READRESPONSE=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEDATA=1,USE_WRITERESPONSE=0"
+   instancePathKey="first_nios2_system:.:cpu_data_master_translator"
+   kind="altera_merlin_master_translator"
+   version="13.0"
+   name="altera_merlin_master_translator">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_master_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_master_translator/altera_merlin_master_translator_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="cpu_data_master_translator,cpu_instruction_master_translator" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 44 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"</message>
+   <message level="Info" culprit="cpu_data_master_translator"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_master_translator</b> "<b>cpu_data_master_translator</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_slave_translator:13.0:AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=0,AV_ADDRESS_W=1,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=0,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=1,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_HOLD_CYCLES=0,AV_DATA_W=32,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=1,AV_MAX_PENDING_WRITE_TRANSACTIONS=0,AV_READLATENCY=0,AV_READ_WAIT=1,AV_READ_WAIT_CYCLES=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_REQUIRE_UNALIGNED_ADDRESSES=0,AV_SETUP_WAIT=0,AV_SETUP_WAIT_CYCLES=0,AV_SYMBOLS_PER_WORD=4,AV_TIMING_UNITS=1,AV_WRITE_WAIT=0,AV_WRITE_WAIT_CYCLES=0,CHIPSELECT_THROUGH_READLATENCY=0,CLOCK_RATE=1,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=17,UAV_BURSTCOUNT_W=3,UAV_BYTEENABLE_W=4,UAV_CONSTANT_BURST_BEHAVIOR=0,UAV_DATA_W=32,USE_ADDRESS=1,USE_AV_CLKEN=0,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=0,USE_CHIPSELECT=1,USE_DEBUGACCESS=0,USE_LOCK=0,USE_OUTPUTENABLE=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=0,USE_READRESPONSE=0,USE_UAV_CLKEN=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEBYTEENABLE=0,USE_WRITEDATA=1,USE_WRITERESPONSE=0"
+   instancePathKey="first_nios2_system:.:jtag_uart_avalon_jtag_slave_translator"
+   kind="altera_merlin_slave_translator"
+   version="13.0"
+   name="altera_merlin_slave_translator">
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_slave_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="jtag_uart_avalon_jtag_slave_translator,onchip_mem_s1_translator,sys_clk_timer_s1_translator,sysid_control_slave_translator,led_pio_s1_translator,cpu_jtag_debug_module_translator" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 42 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"</message>
+   <message level="Info" culprit="jtag_uart_avalon_jtag_slave_translator"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>jtag_uart_avalon_jtag_slave_translator</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_master_agent:13.0:ADDR_MAP=&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;address_map&gt;
+ &lt;slave
+   id=&quot;1&quot;
+   name=&quot;jtag_uart_avalon_jtag_slave_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010038&quot;
+   end=&quot;0x00000000000010040&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;3&quot;
+   name=&quot;onchip_mem_s1_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000008000&quot;
+   end=&quot;0x00000000000010000&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;4&quot;
+   name=&quot;sys_clk_timer_s1_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010000&quot;
+   end=&quot;0x00000000000010020&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;5&quot;
+   name=&quot;sysid_control_slave_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010030&quot;
+   end=&quot;0x00000000000010038&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;2&quot;
+   name=&quot;led_pio_s1_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010020&quot;
+   end=&quot;0x00000000000010030&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;0&quot;
+   name=&quot;cpu_jtag_debug_module_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000000800&quot;
+   end=&quot;0x00000000000001000&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+&lt;/address_map&gt;
+,AUTO_CLK_CLOCK_RATE=-1,AV_BURSTBOUNDARIES=1,AV_BURSTCOUNT_W=3,AV_LINEWRAPBURSTS=0,BURSTWRAP_VALUE=7,CACHE_VALUE=0,ID=0,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),PKT_ADDR_H=52,PKT_ADDR_L=36,PKT_ADDR_SIDEBAND_H=70,PKT_ADDR_SIDEBAND_L=70,PKT_BEGIN_BURST=72,PKT_BURSTWRAP_H=64,PKT_BURSTWRAP_L=62,PKT_BURST_SIZE_H=67,PKT_BURST_SIZE_L=65,PKT_BURST_TYPE_H=69,PKT_BURST_TYPE_L=68,PKT_BYTEEN_H=35,PKT_BYTEEN_L=32,PKT_BYTE_CNT_H=61,PKT_BYTE_CNT_L=59,PKT_CACHE_H=87,PKT_CACHE_L=84,PKT_DATA_H=31,PKT_DATA_L=0,PKT_DATA_SIDEBAND_H=71,PKT_DATA_SIDEBAND_L=71,PKT_DEST_ID_H=79,PKT_DEST_ID_L=77,PKT_PROTECTION_H=83,PKT_PROTECTION_L=81,PKT_QOS_H=73,PKT_QOS_L=73,PKT_RESPONSE_STATUS_H=89,PKT_RESPONSE_STATUS_L=88,PKT_SRC_ID_H=76,PKT_SRC_ID_L=74,PKT_THREAD_ID_H=80,PKT_THREAD_ID_L=80,PKT_TRANS_COMPRESSED_READ=53,PKT_TRANS_EXCLUSIVE=58,PKT_TRANS_LOCK=57,PKT_TRANS_POSTED=54,PKT_TRANS_READ=56,PKT_TRANS_WRITE=55,SECURE_ACCESS_BIT=1,ST_CHANNEL_W=6,ST_DATA_W=90,SUPPRESS_0_BYTEEN_RSP=0,USE_READRESPONSE=0,USE_WRITERESPONSE=0"
+   instancePathKey="first_nios2_system:.:cpu_data_master_translator_avalon_universal_master_0_agent"
+   kind="altera_merlin_master_agent"
+   version="13.0"
+   name="altera_merlin_master_agent">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="AV_LINEWRAPBURSTS" value="0" />
+  <parameter name="AV_BURSTBOUNDARIES" value="1" />
+  <parameter
+     name="ADDR_MAP"
+     value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;address_map&gt;
+ &lt;slave
+   id=&quot;1&quot;
+   name=&quot;jtag_uart_avalon_jtag_slave_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010038&quot;
+   end=&quot;0x00000000000010040&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;3&quot;
+   name=&quot;onchip_mem_s1_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000008000&quot;
+   end=&quot;0x00000000000010000&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;4&quot;
+   name=&quot;sys_clk_timer_s1_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010000&quot;
+   end=&quot;0x00000000000010020&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;5&quot;
+   name=&quot;sysid_control_slave_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010030&quot;
+   end=&quot;0x00000000000010038&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;2&quot;
+   name=&quot;led_pio_s1_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000010020&quot;
+   end=&quot;0x00000000000010030&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+ &lt;slave
+   id=&quot;0&quot;
+   name=&quot;cpu_jtag_debug_module_translator.avalon_universal_slave_0&quot;
+   start=&quot;0x0000000000000800&quot;
+   end=&quot;0x00000000000001000&quot;
+   responds=&quot;1&quot;
+   user_default=&quot;0&quot; /&gt;
+&lt;/address_map&gt;
+" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_master_agent.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_master_agent/altera_merlin_master_agent_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="cpu_data_master_translator_avalon_universal_master_0_agent,cpu_instruction_master_translator_avalon_universal_master_0_agent" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 36 starting:altera_merlin_master_agent "submodules/altera_merlin_master_agent"</message>
+   <message
+       level="Info"
+       culprit="cpu_data_master_translator_avalon_universal_master_0_agent"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_master_agent</b> "<b>cpu_data_master_translator_avalon_universal_master_0_agent</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_slave_agent:13.0:AVS_BURSTCOUNT_SYMBOLS=0,AVS_BURSTCOUNT_W=3,AV_LINEWRAPBURSTS=0,ID=1,MAX_BURSTWRAP=7,MAX_BYTE_CNT=4,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),PKT_ADDR_H=52,PKT_ADDR_L=36,PKT_BEGIN_BURST=72,PKT_BURSTWRAP_H=64,PKT_BURSTWRAP_L=62,PKT_BURST_SIZE_H=67,PKT_BURST_SIZE_L=65,PKT_BYTEEN_H=35,PKT_BYTEEN_L=32,PKT_BYTE_CNT_H=61,PKT_BYTE_CNT_L=59,PKT_DATA_H=31,PKT_DATA_L=0,PKT_DEST_ID_H=79,PKT_DEST_ID_L=77,PKT_PROTECTION_H=83,PKT_PROTECTION_L=81,PKT_RESPONSE_STATUS_H=89,PKT_RESPONSE_STATUS_L=88,PKT_SRC_ID_H=76,PKT_SRC_ID_L=74,PKT_SYMBOL_W=8,PKT_TRANS_COMPRESSED_READ=53,PKT_TRANS_LOCK=57,PKT_TRANS_POSTED=54,PKT_TRANS_READ=56,PKT_TRANS_WRITE=55,PREVENT_FIFO_OVERFLOW=1,ST_CHANNEL_W=6,ST_DATA_W=90,SUPPRESS_0_BYTEEN_CMD=0,USE_READRESPONSE=0,USE_WRITERESPONSE=0"
+   instancePathKey="first_nios2_system:.:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+   kind="altera_merlin_slave_agent"
+   version="13.0"
+   name="altera_merlin_slave_agent">
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="AV_LINEWRAPBURSTS" value="0" />
+  <parameter name="ID" value="1" />
+  <parameter name="MAX_BURSTWRAP" value="7" />
+  <parameter name="MAX_BYTE_CNT" value="4" />
+  <parameter name="AVS_BURSTCOUNT_SYMBOLS" value="0" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_slave_agent.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_burst_uncompressor.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_slave_agent/altera_merlin_slave_agent_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent,onchip_mem_s1_translator_avalon_universal_slave_0_agent,sys_clk_timer_s1_translator_avalon_universal_slave_0_agent,sysid_control_slave_translator_avalon_universal_slave_0_agent,led_pio_s1_translator_avalon_universal_slave_0_agent,cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 34 starting:altera_merlin_slave_agent "submodules/altera_merlin_slave_agent"</message>
+   <message
+       level="Info"
+       culprit="jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_slave_agent</b> "<b>jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_sc_fifo:13.0:AUTO_DEVICE_FAMILY=Cyclone III,BITS_PER_SYMBOL=91,CHANNEL_WIDTH=0,EMPTY_LATENCY=1,ENABLE_EXPLICIT_MAXCHANNEL=false,ERROR_WIDTH=0,EXPLICIT_MAXCHANNEL=0,FIFO_DEPTH=2,SYMBOLS_PER_BEAT=1,USE_ALMOST_EMPTY_IF=0,USE_ALMOST_FULL_IF=0,USE_FILL_LEVEL=0,USE_MEMORY_BLOCKS=0,USE_PACKETS=1,USE_STORE_FORWARD=0"
+   instancePathKey="first_nios2_system:.:jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo"
+   kind="altera_avalon_sc_fifo"
+   version="13.0"
+   name="altera_avalon_sc_fifo">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo.v"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo,onchip_mem_s1_translator_avalon_universal_slave_0_agent_rsp_fifo,sys_clk_timer_s1_translator_avalon_universal_slave_0_agent_rsp_fifo,sysid_control_slave_translator_avalon_universal_slave_0_agent_rsp_fifo,led_pio_s1_translator_avalon_universal_slave_0_agent_rsp_fifo,cpu_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 33 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"</message>
+   <message
+       level="Info"
+       culprit="jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>jtag_uart_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_router:13.0:AUTO_CLK_CLOCK_RATE=-1,CHANNEL_ID=100000,000010,000100,010000,001000,000001,DECODER_TYPE=0,DEFAULT_CHANNEL=1,DEFAULT_DESTID=3,DEFAULT_RD_CHANNEL=-1,DEFAULT_WR_CHANNEL=-1,DESTINATION_ID=0,3,4,2,5,1,END_ADDRESS=0x1000,0x10000,0x10020,0x10030,0x10038,0x10040,MEMORY_ALIASING_DECODE=0,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NON_SECURED_TAG=1,1,1,1,1,1,PKT_ADDR_H=52,PKT_ADDR_L=36,PKT_DEST_ID_H=79,PKT_DEST_ID_L=77,PKT_PROTECTION_H=83,PKT_PROTECTION_L=81,PKT_TRANS_READ=56,PKT_TRANS_WRITE=55,SECURED_RANGE_LIST=,,,,,,SECURED_RANGE_PAIRS=0,0,0,0,0,0,SLAVES_INFO=0:100000:0x800:0x1000:both:1:0:,3:000010:0x8000:0x10000:both:1:0:,4:000100:0x10000:0x10020:both:1:0:,2:010000:0x10020:0x10030:both:1:0:,5:001000:0x10030:0x10038:both:1:0:,1:000001:0x10038:0x10040:both:1:0:,START_ADDRESS=0x800,0x8000,0x10000,0x10020,0x10030,0x10038,ST_CHANNEL_W=6,ST_DATA_W=90,TYPE_OF_TRANSACTION=both,both,both,both,both,both"
+   instancePathKey="first_nios2_system:.:addr_router"
+   kind="altera_merlin_router"
+   version="13.0"
+   name="first_nios2_system_addr_router">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_addr_router.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="addr_router" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 22 starting:altera_merlin_router "submodules/first_nios2_system_addr_router"</message>
+   <message level="Info" culprit="addr_router"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_router:13.0:AUTO_CLK_CLOCK_RATE=-1,CHANNEL_ID=10,01,DECODER_TYPE=0,DEFAULT_CHANNEL=0,DEFAULT_DESTID=3,DEFAULT_RD_CHANNEL=-1,DEFAULT_WR_CHANNEL=-1,DESTINATION_ID=0,3,END_ADDRESS=0x1000,0x10000,MEMORY_ALIASING_DECODE=0,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NON_SECURED_TAG=1,1,PKT_ADDR_H=52,PKT_ADDR_L=36,PKT_DEST_ID_H=79,PKT_DEST_ID_L=77,PKT_PROTECTION_H=83,PKT_PROTECTION_L=81,PKT_TRANS_READ=56,PKT_TRANS_WRITE=55,SECURED_RANGE_LIST=,,SECURED_RANGE_PAIRS=0,0,SLAVES_INFO=0:10:0x800:0x1000:both:1:0:,3:01:0x8000:0x10000:both:1:0:,START_ADDRESS=0x800,0x8000,ST_CHANNEL_W=6,ST_DATA_W=90,TYPE_OF_TRANSACTION=both,both"
+   instancePathKey="first_nios2_system:.:addr_router_001"
+   kind="altera_merlin_router"
+   version="13.0"
+   name="first_nios2_system_addr_router_001">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_addr_router_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="addr_router_001" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 21 starting:altera_merlin_router "submodules/first_nios2_system_addr_router_001"</message>
+   <message level="Info" culprit="addr_router_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router_001</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_router:13.0:AUTO_CLK_CLOCK_RATE=-1,CHANNEL_ID=1,DECODER_TYPE=1,DEFAULT_CHANNEL=0,DEFAULT_DESTID=0,DEFAULT_RD_CHANNEL=-1,DEFAULT_WR_CHANNEL=-1,DESTINATION_ID=0,END_ADDRESS=0x0,MEMORY_ALIASING_DECODE=0,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NON_SECURED_TAG=1,PKT_ADDR_H=52,PKT_ADDR_L=36,PKT_DEST_ID_H=79,PKT_DEST_ID_L=77,PKT_PROTECTION_H=83,PKT_PROTECTION_L=81,PKT_TRANS_READ=56,PKT_TRANS_WRITE=55,SECURED_RANGE_LIST=,SECURED_RANGE_PAIRS=0,SLAVES_INFO=0:1:0x0:0x0:both:1:0:,START_ADDRESS=0x0,ST_CHANNEL_W=6,ST_DATA_W=90,TYPE_OF_TRANSACTION=both"
+   instancePathKey="first_nios2_system:.:id_router"
+   kind="altera_merlin_router"
+   version="13.0"
+   name="first_nios2_system_id_router">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_id_router.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="id_router,id_router_002,id_router_003,id_router_004" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 20 starting:altera_merlin_router "submodules/first_nios2_system_id_router"</message>
+   <message level="Info" culprit="id_router"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>id_router</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_router:13.0:AUTO_CLK_CLOCK_RATE=-1,CHANNEL_ID=01,10,DECODER_TYPE=1,DEFAULT_CHANNEL=0,DEFAULT_DESTID=0,DEFAULT_RD_CHANNEL=-1,DEFAULT_WR_CHANNEL=-1,DESTINATION_ID=0,1,END_ADDRESS=0x0,0x0,MEMORY_ALIASING_DECODE=0,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NON_SECURED_TAG=1,1,PKT_ADDR_H=52,PKT_ADDR_L=36,PKT_DEST_ID_H=79,PKT_DEST_ID_L=77,PKT_PROTECTION_H=83,PKT_PROTECTION_L=81,PKT_TRANS_READ=56,PKT_TRANS_WRITE=55,SECURED_RANGE_LIST=,,SECURED_RANGE_PAIRS=0,0,SLAVES_INFO=0:01:0x0:0x0:both:1:0:,1:10:0x0:0x0:both:1:0:,START_ADDRESS=0x0,0x0,ST_CHANNEL_W=6,ST_DATA_W=90,TYPE_OF_TRANSACTION=both,both"
+   instancePathKey="first_nios2_system:.:id_router_001"
+   kind="altera_merlin_router"
+   version="13.0"
+   name="first_nios2_system_id_router_001">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_id_router_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_router/altera_merlin_router_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="id_router_001,id_router_005" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 19 starting:altera_merlin_router "submodules/first_nios2_system_id_router_001"</message>
+   <message level="Info" culprit="id_router_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_001</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_traffic_limiter:13.0:AUTO_CLK_CLOCK_RATE=-1,ENFORCE_ORDER=1,MAX_OUTSTANDING_RESPONSES=1,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),PIPELINED=0,PKT_BYTEEN_H=35,PKT_BYTEEN_L=32,PKT_BYTE_CNT_H=61,PKT_BYTE_CNT_L=59,PKT_DEST_ID_H=79,PKT_DEST_ID_L=77,PKT_TRANS_POSTED=54,PKT_TRANS_WRITE=55,PREVENT_HAZARDS=0,ST_CHANNEL_W=6,ST_DATA_W=90,VALID_WIDTH=6"
+   instancePathKey="first_nios2_system:.:limiter"
+   kind="altera_merlin_traffic_limiter"
+   version="13.0"
+   name="altera_merlin_traffic_limiter">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_traffic_limiter.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_avalon_st_pipeline_base.v"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_traffic_limiter/altera_merlin_traffic_limiter_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="limiter" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 14 starting:altera_merlin_traffic_limiter "submodules/altera_merlin_traffic_limiter"</message>
+   <message level="Info" culprit="limiter"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_traffic_limiter</b> "<b>limiter</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:13.0:AUTO_CLK_CLOCK_RATE=-1,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=1,SYNC_DEPTH=2"
+   instancePathKey="first_nios2_system:.:rst_controller"
+   kind="altera_reset_controller"
+   version="13.0"
+   name="altera_reset_controller">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="rst_controller" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 13 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_demultiplexer:13.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone III,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NUM_OUTPUTS=6,ST_CHANNEL_W=6,ST_DATA_W=90,VALID_WIDTH=1"
+   instancePathKey="first_nios2_system:.:cmd_xbar_demux"
+   kind="altera_merlin_demultiplexer"
+   version="13.0"
+   name="first_nios2_system_cmd_xbar_demux">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="NUM_OUTPUTS" value="6" />
+  <parameter name="ST_DATA_W" value="90" />
+  <parameter name="VALID_WIDTH" value="1" />
+  <parameter name="ST_CHANNEL_W" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cmd_xbar_demux.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="cmd_xbar_demux" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 12 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_cmd_xbar_demux"</message>
+   <message level="Info" culprit="cmd_xbar_demux"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_demultiplexer:13.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone III,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NUM_OUTPUTS=2,ST_CHANNEL_W=6,ST_DATA_W=90,VALID_WIDTH=6"
+   instancePathKey="first_nios2_system:.:cmd_xbar_demux_001"
+   kind="altera_merlin_demultiplexer"
+   version="13.0"
+   name="first_nios2_system_cmd_xbar_demux_001">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="NUM_OUTPUTS" value="2" />
+  <parameter name="ST_DATA_W" value="90" />
+  <parameter name="VALID_WIDTH" value="6" />
+  <parameter name="ST_CHANNEL_W" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cmd_xbar_demux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="cmd_xbar_demux_001" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 11 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_cmd_xbar_demux_001"</message>
+   <message level="Info" culprit="cmd_xbar_demux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux_001</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_multiplexer:13.0:ARBITRATION_SCHEME=round-robin,ARBITRATION_SHARES=1,1,AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone III,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NUM_INPUTS=2,PIPELINE_ARB=1,PKT_TRANS_LOCK=57,ST_CHANNEL_W=6,ST_DATA_W=90,USE_EXTERNAL_ARB=0"
+   instancePathKey="first_nios2_system:.:cmd_xbar_mux_001"
+   kind="altera_merlin_multiplexer"
+   version="13.0"
+   name="first_nios2_system_cmd_xbar_mux_001">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="PIPELINE_ARB" value="1" />
+  <parameter name="NUM_INPUTS" value="2" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="USE_EXTERNAL_ARB" value="0" />
+  <parameter name="ARBITRATION_SCHEME" value="round-robin" />
+  <parameter name="ST_DATA_W" value="90" />
+  <parameter name="PKT_TRANS_LOCK" value="57" />
+  <parameter name="ARBITRATION_SHARES" value="1,1" />
+  <parameter name="ST_CHANNEL_W" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_cmd_xbar_mux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_arbitrator.sv"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="cmd_xbar_mux_001,cmd_xbar_mux_005" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 10 starting:altera_merlin_multiplexer "submodules/first_nios2_system_cmd_xbar_mux_001"</message>
+   <message level="Info" culprit="cmd_xbar_mux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>cmd_xbar_mux_001</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_demultiplexer:13.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone III,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NUM_OUTPUTS=1,ST_CHANNEL_W=6,ST_DATA_W=90,VALID_WIDTH=1"
+   instancePathKey="first_nios2_system:.:rsp_xbar_demux"
+   kind="altera_merlin_demultiplexer"
+   version="13.0"
+   name="first_nios2_system_rsp_xbar_demux">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="NUM_OUTPUTS" value="1" />
+  <parameter name="ST_DATA_W" value="90" />
+  <parameter name="VALID_WIDTH" value="1" />
+  <parameter name="ST_CHANNEL_W" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_demux.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="rsp_xbar_demux,rsp_xbar_demux_002,rsp_xbar_demux_003,rsp_xbar_demux_004" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 8 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_rsp_xbar_demux"</message>
+   <message level="Info" culprit="rsp_xbar_demux"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_demultiplexer:13.0:AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone III,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NUM_OUTPUTS=2,ST_CHANNEL_W=6,ST_DATA_W=90,VALID_WIDTH=1"
+   instancePathKey="first_nios2_system:.:rsp_xbar_demux_001"
+   kind="altera_merlin_demultiplexer"
+   version="13.0"
+   name="first_nios2_system_rsp_xbar_demux_001">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="NUM_OUTPUTS" value="2" />
+  <parameter name="ST_DATA_W" value="90" />
+  <parameter name="VALID_WIDTH" value="1" />
+  <parameter name="ST_CHANNEL_W" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_demux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_demultiplexer/altera_merlin_demultiplexer_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="first_nios2_system"
+     as="rsp_xbar_demux_001,rsp_xbar_demux_005" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 7 starting:altera_merlin_demultiplexer "submodules/first_nios2_system_rsp_xbar_demux_001"</message>
+   <message level="Info" culprit="rsp_xbar_demux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux_001</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_multiplexer:13.0:ARBITRATION_SCHEME=no-arb,ARBITRATION_SHARES=1,1,1,1,1,1,AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone III,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NUM_INPUTS=6,PIPELINE_ARB=0,PKT_TRANS_LOCK=57,ST_CHANNEL_W=6,ST_DATA_W=90,USE_EXTERNAL_ARB=0"
+   instancePathKey="first_nios2_system:.:rsp_xbar_mux"
+   kind="altera_merlin_multiplexer"
+   version="13.0"
+   name="first_nios2_system_rsp_xbar_mux">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="PIPELINE_ARB" value="0" />
+  <parameter name="NUM_INPUTS" value="6" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="USE_EXTERNAL_ARB" value="0" />
+  <parameter name="ARBITRATION_SCHEME" value="no-arb" />
+  <parameter name="ST_DATA_W" value="90" />
+  <parameter name="PKT_TRANS_LOCK" value="57" />
+  <parameter name="ARBITRATION_SHARES" value="1,1,1,1,1,1" />
+  <parameter name="ST_CHANNEL_W" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_mux.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_arbitrator.sv"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="rsp_xbar_mux" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 2 starting:altera_merlin_multiplexer "submodules/first_nios2_system_rsp_xbar_mux"</message>
+   <message level="Info" culprit="rsp_xbar_mux"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv</b>]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_multiplexer:13.0:ARBITRATION_SCHEME=no-arb,ARBITRATION_SHARES=1,1,AUTO_CLK_CLOCK_RATE=-1,AUTO_DEVICE_FAMILY=Cyclone III,MERLIN_PACKET_FORMAT=response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0),NUM_INPUTS=2,PIPELINE_ARB=0,PKT_TRANS_LOCK=57,ST_CHANNEL_W=6,ST_DATA_W=90,USE_EXTERNAL_ARB=0"
+   instancePathKey="first_nios2_system:.:rsp_xbar_mux_001"
+   kind="altera_merlin_multiplexer"
+   version="13.0"
+   name="first_nios2_system_rsp_xbar_mux_001">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="PIPELINE_ARB" value="0" />
+  <parameter name="NUM_INPUTS" value="2" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter
+     name="MERLIN_PACKET_FORMAT"
+     value="response_status(89:88) cache(87:84) protection(83:81) thread_id(80) dest_id(79:77) src_id(76:74) qos(73) begin_burst(72) data_sideband(71) addr_sideband(70) burst_type(69:68) burst_size(67:65) burstwrap(64:62) byte_cnt(61:59) trans_exclusive(58) trans_lock(57) trans_read(56) trans_write(55) trans_posted(54) trans_compressed_read(53) addr(52:36) byteen(35:32) data(31:0)" />
+  <parameter name="USE_EXTERNAL_ARB" value="0" />
+  <parameter name="ARBITRATION_SCHEME" value="no-arb" />
+  <parameter name="ST_DATA_W" value="90" />
+  <parameter name="PKT_TRANS_LOCK" value="57" />
+  <parameter name="ARBITRATION_SHARES" value="1,1" />
+  <parameter name="ST_CHANNEL_W" value="6" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_rsp_xbar_mux_001.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_multiplexer_hw.tcl"
+       attributes="" />
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_merlin_multiplexer/altera_merlin_arbitrator.sv"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="rsp_xbar_mux_001" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 1 starting:altera_merlin_multiplexer "submodules/first_nios2_system_rsp_xbar_mux_001"</message>
+   <message level="Info" culprit="rsp_xbar_mux_001"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux_001</b>"]]></message>
+   <message level="Info"><![CDATA[Reusing file <b>C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv</b>]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_irq_mapper:13.0:AUTO_DEVICE_FAMILY=Cyclone III,IRQ_MAP=0:16,1:1,NUM_RCVRS=2,SENDER_IRQ_WIDTH=32"
+   instancePathKey="first_nios2_system:.:irq_mapper"
+   kind="altera_irq_mapper"
+   version="13.0"
+   name="first_nios2_system_irq_mapper">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone III" />
+  <parameter name="SENDER_IRQ_WIDTH" value="32" />
+  <parameter name="IRQ_MAP" value="0:16,1:1" />
+  <parameter name="NUM_RCVRS" value="2" />
+  <generatedFiles>
+   <file
+       path="C:/altera/workspace/demo/db/ip/first_nios2_system/submodules/first_nios2_system_irq_mapper.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/13.0sp1/ip/altera/merlin/altera_irq_mapper/altera_irq_mapper_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="first_nios2_system" as="irq_mapper" />
+  <messages>
+   <message level="Debug" culprit="first_nios2_system">queue size: 0 starting:altera_irq_mapper "submodules/first_nios2_system_irq_mapper"</message>
+   <message level="Info" culprit="irq_mapper"><![CDATA["<b>first_nios2_system</b>" instantiated <b>altera_irq_mapper</b> "<b>irq_mapper</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

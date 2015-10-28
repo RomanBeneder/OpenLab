@@ -1,0 +1,8 @@
+
+State Machine - |fpga_top|mc8051_top:i_mc8051_top|mc8051_core:i_mc8051_core|mc8051_control:i_mc8051_control|control_mem:i_control_mem|state
+Name state.EXEC3 state.EXEC2 state.EXEC1 state.FETCH state.STARTUP 
+state.STARTUP 0 0 0 0 0 
+state.FETCH 0 0 0 1 1 
+state.EXEC1 0 0 1 0 1 
+state.EXEC2 0 1 0 0 1 
+state.EXEC3 1 0 0 0 1 
