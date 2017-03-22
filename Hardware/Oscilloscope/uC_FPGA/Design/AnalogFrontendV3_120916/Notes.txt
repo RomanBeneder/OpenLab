@@ -1,0 +1,5 @@
+Change package from D6 and D7 (input voltage protection) to SOT23
+Replace adjustable amplification stage, Decoder U6 and U9 (CD74HC238PW), with VCA
+Verify voltage supply and total current consumption (replace TPS60400) 
+Check if Lowpass filter 2nd Order is necessary (or LRC filter)
+Add suitable hysteresis to comparator

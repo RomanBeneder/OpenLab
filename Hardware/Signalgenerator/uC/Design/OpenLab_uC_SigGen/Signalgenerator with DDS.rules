@@ -1,0 +1,161 @@
+
+(rules PCB Signalgenerator with DDS
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 238)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 300.2 (type default_+12))
+    (clear 300.2 (type default_"-12V"))
+    (clear 50.0 (type smd_smd))
+    (clear 300.2 (type smd_+12))
+    (clear 300.2 (type smd_"-12V"))
+    (clear 300.2 (type "kicad_default"_+12))
+    (clear 300.2 (type "kicad_default"_"-12V"))
+    (clear 300.2 (type +12_+12))
+    (clear 300.2 (type +12_"-12V"))
+    (clear 300.2 (type +12_VDD3.3))
+    (clear 300.2 (type +12_VDD5))
+    (clear 300.2 (type "-12V"_"-12V"))
+    (clear 300.2 (type "-12V"_VDD3.3))
+    (clear 300.2 (type "-12V"_VDD5))
+  )
+  (padstack "Via[0-1]_800:600_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:600_um" "Via[0-1]_800:600_um" default
+  )
+  (via 
+    "Via[0-1]_800:600_um-kicad_default" "Via[0-1]_800:600_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:600_um-+12" "Via[0-1]_800:600_um" +12
+  )
+  (via 
+    "Via[0-1]_800:600_um--12V" "Via[0-1]_800:600_um" "-12V"
+  )
+  (via 
+    "Via[0-1]_800:600_um-VDD3.3" "Via[0-1]_800:600_um" VDD3.3
+  )
+  (via 
+    "Via[0-1]_800:600_um-VDD5" "Via[0-1]_800:600_um" VDD5
+  )
+  (via_rule
+    default "Via[0-1]_800:600_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:600_um-kicad_default"
+  )
+  (via_rule
+    +12 "Via[0-1]_800:600_um-+12"
+  )
+  (via_rule
+    "-12V" "Via[0-1]_800:600_um--12V"
+  )
+  (via_rule
+    VDD3.3 "Via[0-1]_800:600_um-VDD3.3"
+  )
+  (via_rule
+    VDD5 "Via[0-1]_800:600_um-VDD5"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "Net-(C3-Pad1)" "Net-(C4-Pad1)" "Net-(C10-Pad1)" "Net-(C13-Pad1)" "Net-(C13-Pad2)" "Net-(C14-Pad1)" "Net-(C14-Pad2)"
+    "Net-(C15-Pad1)" "Net-(C15-Pad2)" "/OPV_DDS_OUT_1" "Net-(C16-Pad2)" "Net-(C17-Pad1)" "Net-(C21-Pad1)" "Net-(C22-Pad1)" "Net-(C23-Pad1)"
+    "Net-(C23-Pad2)" "/OPV_DDS_OUT_2" "Net-(C24-Pad2)" "Net-(C25-Pad1)" "Net-(C29-Pad1)" "Net-(C30-Pad1)" "Net-(CT1-Pad1)" "Net-(CT2-Pad1)"
+    "Net-(D1-Pad2)" "Net-(D2-Pad1)" "Net-(D3-Pad1)" P3.0 "Net-(D4-Pad1)" P3.2 "Net-(JP1-Pad1)" "Net-(JP2-Pad1)"
+    "Net-(L1-Pad2)" "Net-(P15-Pad2)" P14.0 P14.1 P0.9 P0.10 P0.1 P3.1
+    "Net-(R1-Pad2)" "Net-(R2-Pad2)" "Net-(R4-Pad1)" "Net-(R12-Pad2)" "Net-(R18-Pad2)" "Net-(R20-Pad2)" "Net-(R21-Pad2)" "Net-(R22-Pad2)"
+    "Net-(R23-Pad2)" "Net-(R26-Pad1)" "Net-(R30-Pad1)" "Net-(R31-Pad1)" "Net-(R33-Pad1)" "Net-(RSC2-Pad1)" "Net-(RV3-Pad2)" "Net-(RV6-Pad2)"
+    "/OSCI_16MHz" "Net-(P16-Pad2)" "Net-(P16-Pad3)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class +12
+    VDD3.3 VDD5 +12V "-12V"
+    (clearance_class +12)
+    (via_rule +12)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "-12V"
+    (clearance_class "-12V")
+    (via_rule -12V)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class VDD3.3
+    (clearance_class VDD3.3)
+    (via_rule VDD3.3)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class VDD5
+    (clearance_class VDD5)
+    (via_rule VDD5)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

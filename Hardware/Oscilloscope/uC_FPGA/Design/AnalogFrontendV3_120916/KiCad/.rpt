@@ -1,0 +1,12 @@
+** Drc report for C:/Users/Patrick/Documents/ResearchProjects/openlab/openlab_wp/wp3/HARDWARE/AnalogFrontendV3_120916/KiCad/Analog_Front_v1.kicad_pcb **
+** Created on  **
+
+** Found 2 DRC errors **
+ErrType(32): Netzklasse DuKo-Durchmesser &lt; Globaler Grenzwert
+    @ (0,000 mm,0,000 mm): NETZKLASSE: 'Default' hat DuKo Durchmesser: 0,6, welcher kleiner ist als der Globale: 0,7
+ErrType(32): Netzklasse DuKo-Durchmesser &lt; Globaler Grenzwert
+    @ (0,000 mm,0,000 mm): NETZKLASSE: '0.4' hat DuKo Durchmesser: 0,6, welcher kleiner ist als der Globale: 0,7
+
+** Found 0 unconnected pads **
+
+** End of Report **

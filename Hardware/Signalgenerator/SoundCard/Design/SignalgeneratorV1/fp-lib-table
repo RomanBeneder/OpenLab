@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name OpenLab)(type KiCad)(uri "$(KIPRJMOD)\\OpenLab.pretty")(options "")(descr ""))
+)

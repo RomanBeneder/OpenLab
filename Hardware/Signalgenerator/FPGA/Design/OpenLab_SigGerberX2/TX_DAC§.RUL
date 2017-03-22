@@ -1,0 +1,5 @@
+DRC Rules Export File for PCB: C:\SVN\arsenaltestbox\Arsenal Testbox\PCB Design\TX_DAC_Board\TX_DAC§.PcbDoc
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=11.81
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=11.81
