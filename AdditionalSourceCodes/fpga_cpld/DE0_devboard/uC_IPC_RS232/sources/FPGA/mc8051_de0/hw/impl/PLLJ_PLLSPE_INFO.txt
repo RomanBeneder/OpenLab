@@ -1,0 +1,5 @@
+PLL_Name	prescaler:i_prescaler|altpll:altpll_component|prescaler_altpll:auto_generated|pll1
+PLLJITTER	33
+PLLSPEmax	84
+PLLSPEmin	-53
+

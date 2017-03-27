@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="demo">
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_ic_data_module:first_nios2_system_cpu_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_lcd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_ic_tag_module:first_nios2_system_cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_qvh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_nios2_oci:the_first_nios2_system_cpu_nios2_oci|first_nios2_system_cpu_nios2_ocimem:the_first_nios2_system_cpu_nios2_ocimem|first_nios2_system_cpu_ociram_sp_ram_module:first_nios2_system_cpu_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_il81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_register_bank_b_module:first_nios2_system_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_2ph1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_jtag_uart:jtag_uart|first_nios2_system_jtag_uart_scfifo_r:the_first_nios2_system_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_aq21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_nkd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_cpu:cpu|first_nios2_system_cpu_register_bank_a_module:first_nios2_system_cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_1ph1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_cpu:cpu|lpm_add_sub:Add8" CBX_FILE_NAME="add_sub_hui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|first_nios2_system|first_nios2_system_jtag_uart:jtag_uart|first_nios2_system_jtag_uart_scfifo_w:the_first_nios2_system_jtag_uart_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_aq21.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

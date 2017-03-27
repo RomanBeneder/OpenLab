@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="fpga_top">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpga_top|mc8051_top:i_mc8051_top|mc8051_ram:i_mc8051_ram|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_49b1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpga_top|mc8051_top:i_mc8051_top|mc8051_ramx:i_mc8051_ramx|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_k8g1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpga_top|mc8051_top:i_mc8051_top|mc8051_rom:i_mc8051_rom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1pc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpga_top|prescaler:i_prescaler|altpll:altpll_component" CBX_FILE_NAME="prescaler_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpga_top|mc8051_top:i_mc8051_top|mc8051_core:i_mc8051_core|mc8051_alu:i_mc8051_alu|comb_mltplr:\gen_multiplier1:i_comb_mltplr|lpm_mult:Mult0" CBX_FILE_NAME="mult_19t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
