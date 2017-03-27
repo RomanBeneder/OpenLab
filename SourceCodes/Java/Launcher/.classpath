@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="openLab/launcher/property/ProperitesLauncher.java|openLab/launcher/resource/DataStruct.java|openLab/packet/GuiStatusUpdateMSG.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="DefaultConfiguration"/>
+	<classpathentry kind="src" path="Images"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/JNA_lib/jna-4.2.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

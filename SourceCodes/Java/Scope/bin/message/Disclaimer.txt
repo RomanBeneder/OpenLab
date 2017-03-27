@@ -1,0 +1,11 @@
+I do not accept any responsibility for damage resulting from building or operation
+of the circuits and the programs of the Signal-Toolkit. OpenLab makes no warranties, either express or implied,
+that the software and hardware will meet your requirements, that operation of the software will be 
+uninterrupted or error free, or that all software errors will be corrected. In no event Openlab and 
+the author will be liable for direct, indirect, special, incidental, or consequential damages resulting from any defect in 
+the software and hardware, even if they have been advised of the possibility of such damages. 
+#
+#
+Try at your own risk:#
+If you are implementing any of the project mentioned examples, then please do 
+it on your risk. The entire OpenLab team is not responsible for any software and hardware damages.

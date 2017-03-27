@@ -1,0 +1,136 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 11:12:47  June 18, 2015
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		OPENLAB_FPGA_OSCILLOSCOPE_V1_0_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C16F484C6
+set_global_assignment -name TOP_LEVEL_ENTITY OPENLAB_FPGA_OSCILLOSCOPE_TOP
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:44:24  SEPTEMBER 18, 2016"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_G21 -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_RXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to UART_TXD
+set_location_assignment PIN_AB20 -to UART_RXD
+set_location_assignment PIN_AA20 -to UART_TXD
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CS_SPI1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CS_SPI2
+set_location_assignment PIN_T9 -to CS_SPI1
+set_location_assignment PIN_V15 -to CS_SPI2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sclk_SPI1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sclk_SPI2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sdio_SPI1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sdio_SPI2
+set_location_assignment PIN_R12 -to sclk_SPI1
+set_location_assignment PIN_W17 -to sclk_SPI2
+set_location_assignment PIN_T10 -to sdio_SPI1
+set_location_assignment PIN_T15 -to sdio_SPI2
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_location_assignment PIN_R11 -to AMP1_SEL[0]
+set_location_assignment PIN_U10 -to AMP1_SEL[1]
+set_location_assignment PIN_U9 -to AMP1_SEL[2]
+set_location_assignment PIN_T12 -to AMP2_SEL[0]
+set_location_assignment PIN_R14 -to AMP2_SEL[1]
+set_location_assignment PIN_AB7 -to AMP2_SEL[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AMP1_SEL[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AMP1_SEL[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AMP1_SEL[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AMP2_SEL[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AMP2_SEL[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AMP2_SEL[0]
+set_location_assignment PIN_AA19 -to TRIG_IN1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TRIG_IN1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TRIG_IN2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TRIG_OUT1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TRIG_OUT2
+set_location_assignment PIN_AB19 -to TRIG_IN2
+set_location_assignment PIN_AB9 -to TRIG_OUT1
+set_location_assignment PIN_AA9 -to TRIG_OUT2
+set_location_assignment PIN_AA17 -to PWM_outComp
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PWM_outComp
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COMSPEED_SEL_SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COMSPEED_SEL_SW[0]
+set_location_assignment PIN_J6 -to COMSPEED_SEL_SW[1]
+set_location_assignment PIN_H5 -to COMSPEED_SEL_SW[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE pll.v
+set_global_assignment -name VHDL_FILE UART_TX.vhd
+set_global_assignment -name VHDL_FILE UART_RX.vhd
+set_global_assignment -name VHDL_FILE SERIAL_COM_8N1_SPEEDSEL.vhd
+set_global_assignment -name VHDL_FILE SAMPLE_ACQUISITION_ETS.vhd
+set_global_assignment -name VHDL_FILE PWM.vhd
+set_global_assignment -name VHDL_FILE OPENLAB_FPGA_OSCILLOSCOPE_TOP.vhd
+set_global_assignment -name VHDL_FILE OPENLAB_FIFO.vhd
+set_global_assignment -name VHDL_FILE OPENLAB_BINARY_PROTO.vhd
+set_global_assignment -name VHDL_FILE EDGE_DETECT.vhd
+set_global_assignment -name VHDL_FILE ADS7885_IPCORE.vhd
+set_location_assignment PIN_J1 -to STATUS_LED[0]
+set_location_assignment PIN_J2 -to STATUS_LED[1]
+set_location_assignment PIN_J3 -to STATUS_LED[2]
+set_location_assignment PIN_H1 -to STATUS_LED[3]
+set_location_assignment PIN_F2 -to STATUS_LED[4]
+set_location_assignment PIN_E1 -to STATUS_LED[5]
+set_location_assignment PIN_C1 -to STATUS_LED[6]
+set_location_assignment PIN_C2 -to STATUS_LED[7]
+set_location_assignment PIN_B2 -to STATUS_LED[8]
+set_location_assignment PIN_B1 -to STATUS_LED[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to STATUS_LED[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

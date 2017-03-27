@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>About OpenLab</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+    <div class="menu">
+	        <a href="HelpContent.html">Introduction</a>
+		    <p><b>Hardware</b></p>
+	        <a href="Hardware.html">Hardware Description</a><br>
+	        <p><b>Graphical User Interface</b></p>
+	      	<a href="GUI_MainWindow.html">Main Window</a><br>
+	      	
+			<ul type="disc">
+			    <li><a href="GUI_ProbeComp.html">Probe Compensation</a><br></li>
+			    <li><a href="GUI_SignalGraph.html">Signal Graph</a><br></li>
+				<li><a href="GUI_Horizontal.html">Horizontal</a><br></li>
+				<li><a href="GUI_RunCtrl.html">Run Control</a><br></li>
+				<li><a href="GUI_Trigger.html">Trigger</a><br></li>
+				<li><a href="GUI_Vertical.html">Vertical</a><br></li>
+			</ul>						
+			<a href="GUI_Snapshot.html">Snapshot Feature</a><br>
+			<a href="GUI_CSV_Export.html">CSV Export</a><br>
+    </div>
+    <div class="separator"></div>
+    <div class="content">
+        <h2>Vertical</h2>
+       		<p>The vertical section of the scope controls the voltage scale on the display. 
+       		There are two knobs in this section, which allow you to individually control the vertical position and volts/div.</p>
+			 <p>The following image below illustrates the <b>'Vertical Section'</b>. </p>
+			<img src="img/GUI_Vertical.png" width="300" height="300" alt="GUI Vertical" align="middle"> 	
+			
+			<p>The upper knob (vertical-scaling) allows the user to adjust the vertical scaling. The more critical volts per division knob allows 
+			you to set the vertical scale on the screen. Rotating the knob clockwise will decrease the scale, and counter-clockwise 
+			will increase. A smaller scale, fewer volts per division on the screen, means you are more “zoomed in” to the waveform.</p>
+			
+			<p><font color="red"> Hint: Double click on this knob will set the vertical scaling to the factor 5.0V/Div (default).</font></p>
+			
+			<p>The text-field below the vertical-scaling knob allows the user to adjust the parameter V/Div more precisely compared to the knob.</p>
+			
+			<p>The buttons labeled with '1' and '2' make it possible to switch on/off the corresponding channel. The channel is activated when 
+			background color is green.</p>
+			
+			<p>The lower knob (vertical-positioning) controls the vertical offset of the waveform on the screen. Rotate the knob clockwise, 
+			and the wave will move up, counter-clockwise will move it down the display. You can use the position knob 
+			to offset part of a waveform off the screen.</p>
+			
+			<p><font color="red"> Hint: Double click on this knob will set the corresponding signal in the middle of the signal graph (default).</font></p>
+    </div>
+    </div>
+</body>
+</html>

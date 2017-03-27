@@ -1,0 +1,37 @@
+Analog Bandwidth: 5MHz
+#
+#
+Analog Input Range: 28 Vpp (10:1 probe) - 2Vpp (1:1 probe)
+#
+#
+Input Coupling: AC / DC
+#
+#
+Input Characteristics: 1MOhm || 15pF
+#
+#
+Maximum Sampling Rate (real-time): 2.5MSa/s (FPGA)
+#
+#
+Equivalent Sampling Rate (ETS mode): 50 MSa/s (FPGA)
+#
+#
+Equivalent Sampling Mode: Sequential ETS 
+#
+#
+Memory Depth: 512Sa
+#
+#
+Trigger Sources: CH1, CH2, OFF
+#
+#
+Trigger Modes: Auto, Single
+#
+#
+Trigger Slope: Rising, Falling or Both edges
+#
+#
+Trigger Implementation: Hardware Trigger (post-trigger)
+#
+#
+Trigger Accurracy: 10mV

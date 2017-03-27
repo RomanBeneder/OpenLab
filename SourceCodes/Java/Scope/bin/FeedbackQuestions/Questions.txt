@@ -1,0 +1,27 @@
+Please rate your experience level with electronic measurement devices.
+Do you think that the specifications of the oscilloscope were sufficient for your use case?
+Would you rather prefer the OpenLab oscilloscope instead of a traditional oscilloscope for your measurement assignments during your courses?
+Would you agree that the user manual was helpful during the hardware setup?
+Please rate the interaction between hardware and software.
+How satisfied are you with the mechanical construction of the hardware?
+How satisfied are you with the provided accessories of the oscilloscope?
+Please rate the convenience level of the coupling switch. (AC/DC)
+Please rate the convenience level of the probe compensation.
+How satisfied were you with the setup process of the utilized software?
+How satisfied are you with the usability of the graphical user interface?
+Please rate the Look & Feel of the graphical user interface.
+Please rate the scaling of the horizontal and vertical axis.
+Please rate the Single-Shot function.
+Please rate the Auto-Scale function.
+Do you think that the accuracy of the trigger was sufficient for your measurements?
+Please rate the Snapshot function.
+Are you satisfied with the available measurements?
+Please rate the "export to .csv file" function.
+Do you think that the status field was helpful?
+Would it be nice to have mathematical operation features (Add, Subtract)?
+Would it be nice to have an FFT (Hanning Window) feature?
+Would you need the functionality to decode digital signals?
+Would you rate the available functionality self-explanatory?
+Since the scope is indented to be used at home, how comfortable is it to transport it?
+Please rate the Feedback function.
+Would you consider the 'Getting Started' videos as helpful?

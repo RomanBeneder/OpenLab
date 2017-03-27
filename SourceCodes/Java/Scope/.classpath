@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="openLab/device/serial/SerialInterface.java|openLab/processing/UserInterfaceStruct.java|api/FeedbackController.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="FeedbackQuestions"/>
+	<classpathentry kind="src" path="Dialog"/>
+	<classpathentry kind="src" path="DefaultConfiguration"/>
+	<classpathentry kind="src" path="srcAPI"/>
+	<classpathentry kind="src" path="Help"/>
+	<classpathentry kind="src" path="Message"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Images"/>
+	<classpathentry kind="lib" path="lib/purejavacomm/purejavacomm-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/JNA/jna-4.0.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

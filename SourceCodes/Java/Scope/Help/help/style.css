@@ -1,0 +1,66 @@
+
+.menu {
+	float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 500em; /* equal height trick */
+    margin-bottom: -500em; /* because css sucks */
+}
+
+.separator {
+	float: left;
+	background-color: #B0B0B0;
+	width: 2px;
+    padding-bottom: 500em; /* equal height trick */
+    margin-bottom: -500em;
+}
+
+.content {
+    float: left;
+    margin-left: 15px;
+    width: 60%;
+    padding-bottom: 500em; /* equal height trick */
+    margin-bottom: -500em;
+}
+
+.wrap {
+    overflow-y: hidden;
+}
+
+body {
+	color: #404040;
+}
+
+h1, h2, h3{
+    color: #00649b;
+}
+
+h4 {
+    color: #00649b;
+    margin-bottom: 0px;
+}
+
+a {
+   outline: 0;  /* remove anchor outline */
+}
+
+a:link {
+    color: #00649b;
+}
+
+a:visited {
+    color: #00649b;
+}
+
+a:hover {
+    color: #0064ab;
+}
+
+a:active {
+    color: #00644b;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,80 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*
+    Document   : controlStyle1
+*/
+
+/* .root */
+/*{*/
+/*     -fx-background-image: url("background.jpg");*/
+/*}*/
+
+.vertical-knob .knob {
+    -fx-background-image: url("/images/knob.png");
+    -fx-background-size: stretch;
+}
+
+.horizontal-knob .knob {
+    -fx-background-image: url("/images/knobHorizontal.png");
+    -fx-background-size: stretch;
+}
+
+.button-Run-Single {
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+.button-CHselect {
+	-fx-min-height: 40;
+	-fx-background-color: #98e698;
+}
+
+.button-CHxctrl-pressed {
+	-fx-min-height: 40;
+	-fx-base: #98e698;
+}
+
+.button-CHxctrl-released {
+	-fx-min-height: 40;
+}
+
+.button-Single-pressed {
+	-fx-base: #ffcc80;
+}
+
+
+.label-Overline {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-underline: true;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 1px;
+    -fx-effect: null;
+}
+
+.bordered-titled-title {
+  -fx-background-color: -fx-background;
+  -fx-translate-y: -12; /* play around with this value when changing the title font to get a vertically centered title */
+}
+
+.bordered-titled-border {
+  -fx-content-display: top;
+   /* -fx-border-insets: 15 15 15 15; */
+  /*-fx-background-color: white;*/
+  -fx-border-color: -fx-box-border;
+  -fx-border-width: 2;
+  -fx-border-radius: 4;
+}
+
+.bordered-titled-content {
+  -fx-padding: 26 0 10 0;
+}
+
+.menu-item-icon-exit  .label:first-child {
+	-fx-graphic: url("/images/HelpIcon.png");
+}
+
+/* EOF */

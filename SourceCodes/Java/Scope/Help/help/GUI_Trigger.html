@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>About OpenLab</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+    <div class="menu">
+	        <a href="HelpContent.html">Introduction</a>
+		    <p><b>Hardware</b></p>
+	        <a href="Hardware.html">Hardware Description</a><br>
+	        <p><b>Graphical User Interface</b></p>
+	      	<a href="GUI_MainWindow.html">Main Window</a><br>
+	      	
+			<ul type="disc">
+			    <li><a href="GUI_ProbeComp.html">Probe Compensation</a><br></li>
+			    <li><a href="GUI_SignalGraph.html">Signal Graph</a><br></li>
+				<li><a href="GUI_Horizontal.html">Horizontal</a><br></li>
+				<li><a href="GUI_RunCtrl.html">Run Control</a><br></li>
+				<li><a href="GUI_Trigger.html">Trigger</a><br></li>
+				<li><a href="GUI_Vertical.html">Vertical</a><br></li>
+			</ul>
+			<a href="GUI_Snapshot.html">Snapshot Feature</a><br>
+			<a href="GUI_CSV_Export.html">CSV Export</a><br>
+    </div>
+    <div class="separator"></div>
+    <div class="content">
+        <h2>Trigger</h2>
+        	 <p>The currently designed front-end features a comparator which is utilized as the hardware trigger.
+        	 The hardware trigger is implemented as <b>post-triggered acquisition</b>.</p>
+			
+			 
+			 <p>The trigger mode determines how the instrument behaves in the absence of a trigger event:</p>
+	 			<ul type="disc">
+				    <li><b>Normal trigger</b> mode enables the instrument to acquire a waveform only when it is triggered. 
+				    If no trigger occurs, the last waveform record acquired remains on the display. 
+				    If no last waveform exists, no waveform is displayed.<br><br></li>
+				    <li><b>Auto trigger</b> mode enables the instrument to acquire a waveform even if a trigger does not occur. 
+				    Auto mode uses a timer that starts when the acquisition is started, and the pre-trigger information is obtained. 
+				    If a trigger event is not detected before the timer times out, the instrument forces a trigger. 
+				    The length of time it waits for a trigger event depends on the time base setting.</li>
+				</ul>
+			<b>Auto mode</b>, when forcing triggers in the absence of valid triggering events, does not synchronize the waveform on the display. 
+			The waveform will appear to roll across the screen. If valid triggers occur, the display will become stable.
+				
+			<p><font color="red"> Hint: Normal trigger mode can currently not be selected within the GUI.</font></p>
+				
+			 <p>The following image below illustrates the <b>'Trigger Section'</b>.</p>
+			<img src="img/GUI_Trigger.png" width="400" height="175" alt="Trigger Control" align="middle"> 	
+			
+			<p>The combobox 'Source' allows the user to trigger either on Channel 1 or Channel 2. Furthermore, the trigger logic can be deactivated with the 
+			'OFF' selection if no triggering is desired.</p>
+			<p>The combobox 'Slope' makes it possible to select the trigger edge either on rising, falling, or both.</p>
+			<p>The trigger level control determines where on that edge the trigger point occurs. </p>
+    </div>
+    </div>
+</body>
+</html>

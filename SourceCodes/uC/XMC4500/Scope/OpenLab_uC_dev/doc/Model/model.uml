@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_A39EsGFtEeWYeOo6RDuMWw" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_Id_pAGFtEeWYeOo6RDuMWw" name="Class1">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_OdVVQGFtEeWYeOo6RDuMWw" name="init activity" specification="_LISFAGFtEeWYeOo6RDuMWw"/>
+    <ownedOperation xmi:id="_LISFAGFtEeWYeOo6RDuMWw" name="init" method="_OdVVQGFtEeWYeOo6RDuMWw"/>
+    <ownedOperation xmi:id="_2pXe4GFuEeWYeOo6RDuMWw" name="Operation_2"/>
+    <ownedOperation xmi:id="_BsWrMGFvEeWYeOo6RDuMWw" name="Operation_3"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_VaCMMGFuEeWYeOo6RDuMWw" name="NewModel">
+    <ownedAttribute xmi:id="_auGG0GFuEeWYeOo6RDuMWw" name="Class1" type="_Id_pAGFtEeWYeOo6RDuMWw"/>
+    <ownedAttribute xmi:id="_cxyc4GFuEeWYeOo6RDuMWw" name="Class1" type="_Id_pAGFtEeWYeOo6RDuMWw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_2pmvcGFuEeWYeOo6RDuMWw" name="Operation_2"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BsZHcGFvEeWYeOo6RDuMWw" name="Operation_3"/>
+    <lifeline xmi:id="_auGt4GFuEeWYeOo6RDuMWw" name="Class1" represents="_auGG0GFuEeWYeOo6RDuMWw" coveredBy="_2pn9kGFuEeWYeOo6RDuMWw _2pn9kmFuEeWYeOo6RDuMWw _2pn9kWFuEeWYeOo6RDuMWw _Bsa8oWFvEeWYeOo6RDuMWw _BsbjsWFvEeWYeOo6RDuMWw _BsbjsGFvEeWYeOo6RDuMWw"/>
+    <lifeline xmi:id="_cxyc4WFuEeWYeOo6RDuMWw" name="Class1" represents="_cxyc4GFuEeWYeOo6RDuMWw" coveredBy="_2pnWgWFuEeWYeOo6RDuMWw _2pn9k2FuEeWYeOo6RDuMWw _Bsa8oGFvEeWYeOo6RDuMWw _BscKwGFvEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2pnWgWFuEeWYeOo6RDuMWw" name="Operation_2_sender" covered="_cxyc4WFuEeWYeOo6RDuMWw" message="_2pk6QGFuEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2pn9kGFuEeWYeOo6RDuMWw" name="Operation_2_receiver" covered="_auGt4GFuEeWYeOo6RDuMWw" message="_2pk6QGFuEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_2pn9kmFuEeWYeOo6RDuMWw" name="Operation_2" covered="_auGt4GFuEeWYeOo6RDuMWw" finish="_2pn9kWFuEeWYeOo6RDuMWw" start="_2pn9kGFuEeWYeOo6RDuMWw" behavior="_2pmvcGFuEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2pn9kWFuEeWYeOo6RDuMWw" name="Operation_2_reply_sender" covered="_auGt4GFuEeWYeOo6RDuMWw" message="_2pnWgGFuEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_2pn9k2FuEeWYeOo6RDuMWw" name="Operation_2_reply_receiver" covered="_cxyc4WFuEeWYeOo6RDuMWw" message="_2pnWgGFuEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Bsa8oGFvEeWYeOo6RDuMWw" name="Operation_3_sender" covered="_cxyc4WFuEeWYeOo6RDuMWw" message="_BsYgYGFvEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Bsa8oWFvEeWYeOo6RDuMWw" name="Operation_3_receiver" covered="_auGt4GFuEeWYeOo6RDuMWw" message="_BsYgYGFvEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_BsbjsWFvEeWYeOo6RDuMWw" name="Operation_3" covered="_auGt4GFuEeWYeOo6RDuMWw" finish="_BsbjsGFvEeWYeOo6RDuMWw" start="_Bsa8oWFvEeWYeOo6RDuMWw" behavior="_BsZHcGFvEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BsbjsGFvEeWYeOo6RDuMWw" name="Operation_3_reply_sender" covered="_auGt4GFuEeWYeOo6RDuMWw" message="_BsaVkGFvEeWYeOo6RDuMWw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_BscKwGFvEeWYeOo6RDuMWw" name="Operation_3_reply_receiver" covered="_cxyc4WFuEeWYeOo6RDuMWw" message="_BsaVkGFvEeWYeOo6RDuMWw"/>
+    <message xmi:id="_2pk6QGFuEeWYeOo6RDuMWw" name="Operation_2" receiveEvent="_2pn9kGFuEeWYeOo6RDuMWw" sendEvent="_2pnWgWFuEeWYeOo6RDuMWw" signature="_2pXe4GFuEeWYeOo6RDuMWw"/>
+    <message xmi:id="_2pnWgGFuEeWYeOo6RDuMWw" name="Operation_2_reply" messageSort="reply" receiveEvent="_2pn9k2FuEeWYeOo6RDuMWw" sendEvent="_2pn9kWFuEeWYeOo6RDuMWw"/>
+    <message xmi:id="_BsYgYGFvEeWYeOo6RDuMWw" name="Operation_3" receiveEvent="_Bsa8oWFvEeWYeOo6RDuMWw" sendEvent="_Bsa8oGFvEeWYeOo6RDuMWw" signature="_BsWrMGFvEeWYeOo6RDuMWw"/>
+    <message xmi:id="_BsaVkGFvEeWYeOo6RDuMWw" name="Operation_3_reply" messageSort="reply" receiveEvent="_BscKwGFvEeWYeOo6RDuMWw" sendEvent="_BsbjsGFvEeWYeOo6RDuMWw"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,7 @@
+<map id="timer.h" name="timer.h">
+<area shape="rect" id="node2" href="$commands_8h.html" title="commands.h" alt="" coords="107,80,205,107"/>
+<area shape="rect" id="node6" href="$timer_8c.html" title="32&#45;bit Timer source file " alt="" coords="229,80,291,107"/>
+<area shape="rect" id="node3" href="$commands_8c.html" title="commands.c" alt="" coords="5,155,104,181"/>
+<area shape="rect" id="node4" href="$uart_8h.html" title="UART source file. " alt="" coords="129,155,183,181"/>
+<area shape="rect" id="node5" href="$uart_8c.html" title="UART source file. " alt="" coords="129,229,183,256"/>
+</map>

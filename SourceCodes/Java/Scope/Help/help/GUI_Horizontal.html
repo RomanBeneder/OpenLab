@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>About OpenLab</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+    <div class="menu">
+	        <a href="HelpContent.html">Introduction</a>
+		    <p><b>Hardware</b></p>
+	        <a href="Hardware.html">Hardware Description</a><br>
+	        <p><b>Graphical User Interface</b></p>
+	      	<a href="GUI_MainWindow.html">Main Window</a><br>
+	      	
+			<ul type="disc">
+			    <li><a href="GUI_ProbeComp.html">Probe Compensation</a><br></li>
+			    <li><a href="GUI_SignalGraph.html">Signal Graph</a><br></li>
+				<li><a href="GUI_Horizontal.html">Horizontal</a><br></li>
+				<li><a href="GUI_RunCtrl.html">Run Control</a><br></li>
+				<li><a href="GUI_Trigger.html">Trigger</a><br></li>
+				<li><a href="GUI_Vertical.html">Vertical</a><br></li>
+			</ul>
+			<a href="GUI_Snapshot.html">Snapshot Feature</a><br>
+			<a href="GUI_CSV_Export.html">CSV Export</a><br>
+    </div>
+    <div class="separator"></div>
+    <div class="content">
+        <h2>Horizontal Section</h2>
+        
+        <p>The following image below illustrates the <b>'Horizontal Section'</b>.</p>
+		<img src="img/GUI_Horizontal.png"	width="150" height="150" alt="GUI Horizontal Section" align="middle"> 	
+		
+		<p>The horizontal knob is utilized to adjust the factor 'Time per Division'. This scaling factor has a close connection between the sampling rate.
+		Thus, whenever the factor 'Time per Division' changes the sampling rate is adjusted accordingly. The horizontal knob has a value area from 1&mu;s - 1s.
+		The GUI does not support any possibility to set	the sample rate manually!</p> 
+		
+		<p><font color="red">Hint: If the horizontal knob is set to lower than 10ms/Div, the signal acquisition takes longer and the signal graph 
+		is not updated immediately. However, the application has not crashed!</font></p>
+		
+		<p> Every OpenLab device supports the <b>ETS</b> (Equivalent Time Sampling) mode.
+		 This mode is entered whenever the maximum sample rate of the corresponding device is exceeded. The <b>ETS</b> lamp turns red whenever
+		 the device is in the <b>ETS</b> mode. Within the <b>ETS</b> mode only periodically signal can be analysed and measured. 
+		 For further details about the <b>ETS</b> mode, you can click the label 'ETS:' or click on the following link: 
+		 <a href="https://es.technikum-wien.at/openlab/openlab_wiki/wikis/ETS_theory"> Equivalent Time Sampling</a></p>
+		
+    </div>
+    </div>
+</body>
+</html>

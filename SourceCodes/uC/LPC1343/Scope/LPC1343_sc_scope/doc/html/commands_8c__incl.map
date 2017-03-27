@@ -1,0 +1,8 @@
+<map id="commands.c" name="commands.c">
+<area shape="rect" id="node2" href="$commands_8h.html" title="commands.h" alt="" coords="147,80,245,107"/>
+<area shape="rect" id="node3" href="$timer_8h.html" title="32&#45;bit Timer header file " alt="" coords="124,155,185,181"/>
+<area shape="rect" id="node8" href="$pwm_8h.html" title="16&#45;bit PWM header file " alt="" coords="21,155,81,181"/>
+<area shape="rect" id="node9" href="$crc_8h.html" title="crc.h" alt="" coords="344,229,395,256"/>
+<area shape="rect" id="node10" href="$uart_8h.html" title="UART source file. " alt="" coords="210,155,265,181"/>
+<area shape="rect" id="node6" href="$gpio_8h.html" title="GPIO header file. " alt="" coords="21,229,80,256"/>
+</map>
