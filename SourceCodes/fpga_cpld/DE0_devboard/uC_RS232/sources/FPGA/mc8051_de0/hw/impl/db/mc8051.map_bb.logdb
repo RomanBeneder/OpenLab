@@ -1,2 +1,0 @@
-v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mc8051_top:i_mc8051_top|mc8051_core:i_mc8051_core|mc8051_alu:i_mc8051_alu|comb_mltplr:\gen_multiplier1:i_comb_mltplr|lpm_mult:Mult0|mult_19t:auto_generated|mac_out2,
