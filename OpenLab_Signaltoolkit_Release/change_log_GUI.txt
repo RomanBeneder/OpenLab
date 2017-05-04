@@ -1,0 +1,24 @@
+GUI Version 1.0.3
+Additional Measurments
+Single-Shot Bug fixing
+Trigger-OFF Bug fixing
+Trigger Mode Selection (Auto/Normal)
+
+GUI Version 1.0.2
+Horizontal Positioning (Adjustable Step within Channel Settings Dialog)
+Corrected 'Export to .csv' Function (Time Base and Stability)
+
+GUI Version 1.0.1
+Bug Fixing (Serail Interface - Preamble)
+Channel Parameter Adjustment (Probe Attenuation)
+OpenLab Media Center 
+Added Menu Icons
+
+GUI Version 1.0.0
+FXML based GUI
+Frequency Measurement
+Probe Compensation
+Extended About Dialog
+Integrated HTML based Help Menu
+Removed Feedback 'Send Mail' Function (Generate File [Anonymity])
+
