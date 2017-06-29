@@ -1,3 +1,9 @@
+GUI Version 1.0.4
+XY-Mode
+Extended additional measurements
+FFT (Hamming, Hanning, Blackman)
+minior bug fixing
+
 GUI Version 1.0.3
 Additional Measurments
 Single-Shot Bug fixing
@@ -21,4 +27,3 @@ Probe Compensation
 Extended About Dialog
 Integrated HTML based Help Menu
 Removed Feedback 'Send Mail' Function (Generate File [Anonymity])
-

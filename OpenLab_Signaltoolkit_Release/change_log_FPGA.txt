@@ -1,4 +1,3 @@
-
 ==== OpenLab Oscilloscope FPGA DE0 Changelog ====
 
 V1.3.1
