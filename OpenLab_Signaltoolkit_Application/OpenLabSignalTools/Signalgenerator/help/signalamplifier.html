@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Signal Amplifier PCB</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+    <div class="menu">
+        <a href="index.html">Home</a></br>
+        <a href="about.html">About</a></br>
+        <p><b>User Interface</b></p>
+        <a href="mainwindow.html">Main Window</a></br>
+        <a href="ifftwindow.html">Inverse Fourier Window</a></br>
+        <a href="drawwindow.html">Draw Waveform Window</a></br>
+        <p><b>Devices</b></p>
+        <a href="soundcard.html">Soundcard</a></br>
+        <li><a href="signalamplifier.html">Signal Amplifier</a></li></br>
+        <a href="ucbased.html">uC Board</a></br>
+        <a href="fpgabased.html">FPGA Board</a></br>
+    </div>
+    <div class="separator"></div>
+    <div class="content">
+        <h2>Signal Amplifier</h2>
+        
+        <h3>PCB</h3>
+        <img src="img/SignalAmplifier.png"   width="450" height="260" alt="SignalAmplifier" align="middle">
+        <img src="img/SignalAmplifierControls.png"   width="450" height="260" alt="SignalAmplifierControls" align="middle">
+        <h4>Offset Adjustment</h4>
+        <p>To finetune the offset, adjust the potentiometer until the reference voltage @Testpoint is 2,5V.
+        Another way is to adjust the potentiometer until the voltage on the points @Offset 1 or @Offset 2 equals the offset you have set in the UI.</p>
+        
+        <h4>Programming the uC</h4>
+        <p>To programm the uC is has to be brought into bootloader mode:
+        <ul>
+            <li>Hold the reset & bootloader button</li>
+            <li>Release the reset button</li>
+            <li>Release the bootloader button short afterwards</li>
+        </ul>
+        Now it can be programmed via USB by Atmels programming software "Flip".
+        </p>
+        
+        <p>
+        As alternative, the pins for ISP programming are accessible (see next image). This method is NOT recommended.
+        </p>
+        
+        <h4>Pin Description</h4>
+        <img src="img/SignalAmplifierPins.png"></br>
+        
+        <h4>Part Description</h4>
+        <img src="img/SignalAmplifierParts.png"></br>
+        
+        <h3>USB Details:</h3>
+        <p>USB Device Class: CDC (0x2)</br>
+        Endpoints: CDC Data In & Data Out (0x0A)</br>
+        Max. Power: 100 mW</br>
+        Vendor ID: 0x03EB (Atmel)</br>
+        Product ID: 0x2044 (LUFA CDC Application)</p>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>Soundcard</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+    <div class="menu">
+        <a href="index.html">Home</a></br>
+        <a href="about.html">About</a></br>
+        <p><b>User Interface</b></p>
+        <a href="mainwindow.html">Main Window</a></br>
+        <a href="ifftwindow.html">Inverse Fourier Window</a></br>
+        <a href="drawwindow.html">Draw Waveform Window</a></br>
+        <p><b>Devices</b></p>
+        <a href="soundcard.html">Soundcard</a></br>
+        <li><a href="signalamplifier.html">Signal Amplifier</a></li></br>
+        <a href="ucbased.html">uC Board</a></br>
+        <a href="fpgabased.html">FPGA Board</a></br>
+    </div>
+    <div class="separator"></div>
+    <div class="content">
+        <h2>Soundcard</h2>
+        <p>The application can use the soundcard to output waveforms. As the soundcards output voltage is typically quite low, it might be necessary to amplify it. For this task, a piece of hardware was developed. It will be refered to as <i>Amplifier Device</i>.</br></br>
+     
+        This chapter guides trough the setup, configuration and use of this signal generator.<p/>
+        <h3>Setup</h3>
+        <p>The application itself requires no installation. It only requires a Java Runtime Environment >= 1.8.
+        
+        <h4>Signal Amplifier - Windows</h4>
+        <p>Unfortunately the <b>amplifier device</b> needs installation/configuration even though
+        it is a regular USB CDC device.<p>
+        
+        To do this, the "SignalAmplifier.inf" (driver description) file has to be installed..
+        The file can be found in the "driver" folder in the application directory.
+        Depending on your windows version, you may be required to <b>allow installation of unsigned drivers</b>!.
+        
+        When everything worked out the device should be listed in the device manager as "Signal Amplifier".
+        See and remember what COM port it was assigned to.
+        
+        <h4>Signal Amplifier - Linux / MacOS</h4>
+        No installation is required, just some steps to gather information.
+        In a terminal run "<b>dmesg</b>" and find the signal amplifier in the output. See under what name it was mounted. It will probably be something like "tty...".
+        Remember that name for the configuration.
+        </br>
+        </br>
+        </br>
+        
+        <!-------------------------->
+        <!-- CONFIG OVERVIEW  -->
+        <!-------------------------->
+        <h3>Configuration Overview</h3>
+        <h4>Soundcard.conf</h4>
+        This file contains the basic configuration parameters for the soundcard.
+        <p style="background-color: lightgrey">
+        #Sun Apr 09 17:52:10 CEST 2017</br>
+        AttenuationArbitrary=0.78</br>
+        AttenuationSawtooth=0.7</br>
+        AttenuationSquare=0.5</br>
+        AttenuationTriangle=0.98</br>
+        AttenuationSine=1.0</br>
+        MaxAmplitude=1.8</br>
+        SampleRate=44100
+        </p>
+        The application will try to operate the soundcard with the specified samplerate. If this is not possible, an error will occur at runtime.
+        A value of 44100, or 48000 will work with every recent soundcard. Pleaase note that some soundcards accept higher values for compatiblity but downsample the audio data in the background.
+        So a samplerate of 96kHz will not necessarly mean a max output frequency of 48kHz.</br></br>
+        
+        With the "MaxAmplitude" parameter, the max. amplitude of the soundcard is specified. This is important, as this value can not be retrieved from the driver and has to be supplied by the user. The value is the max. amplitude in Volt of a sine wave at 100% volume (master and application volume).</br></br>
+        
+        Some cheaper (mostly integrated) soundcards attenuate the amplitude of complex signals. This would result in incorrect values beeing displayed.
+        The "Attenuation" parameters are used to specify this attentuation factor for the soundcard in use. A factor of 0.7 means the waveforms amplitude is just 70% of the amplitude that a sine would have at this volume.
+        
+        <h4>SoundcardAmplifier.conf</h4>
+        This file contains the configuration parameters for the signal amplifier.
+        
+        Adjust the "Port" parameter in the "SoundcardAmplifier.conf" file to the COM port (Windows) or the mounting point (Linux) that was gathered in the installation step.
+        In case the file is not there, create it yourself or run the signal generator application once.
+        
+        The "Amplification" parameter indictaed the amplification of the amplfier device. This should usually stay at 12.0. In case measurement differ, this parameter can be adjusted.
+        
+        Example config:
+        <p style="background-color: lightgrey">
+        #Thu Mar 30 21:07:31 CEST 2017</br>
+        Amplification=12.0</br>
+        Port=COM12
+        </p>
+        or under linux:
+        <p style="background-color: lightgrey">
+        #Thu Mar 30 21:07:31 CEST 2017</br>
+        Amplification=12.0</br>
+        Port=ttyACM0
+        </p>
+             
+
+        <!-------------------------->
+        <!-- BASIC CALIBRATION  -->
+        <!-------------------------->
+        </br>
+        </br>
+        <h3>Basic Calibration</h3>
+        <p>The waveforms amplitude is dependent on the volume. At 100% the typical range is -0.7 to +0.7 Volts, but can be up to +/- 2V, depending on the soundcard.
+        Therefore it is necessary to calibrate the setup, so the emitted signal matches the values specified in the UI.</p>
+        <ul>
+            <li>Start the signalgenerator WITHOUT an amplifier device.</li>
+            <li>Ensure the computers MASTER volume is on maximum.</li>
+            <li>Activate a sine with maximal amplitude in the UI(value doesnt matter, just maximum)</li>
+            <li>Measure the amplitude of the signal with an oscilloscope</li>
+            <li>Set the "MaxAmplitude" parameter in the configuration file "Soundcard.conf" to the just measured value.</li>
+        </ul>
+        
+        
+        <!-------------------------->
+        <!-- STARTUP -->
+        <!-------------------------->
+        </br>
+        </br>
+        <h3>Start-up</h3>
+        <ul>
+            <li>Connect the amplifier with the USB-cable to the computer.</li>
+            <li>Connect the amplifier with the AUDIO-cable (TRS 3.5mm) to the computer.</li>
+            <li>Make sure the default sound output device is the audio-jack / builtin speaker</li>
+            <li>Turn the master volume to 100% (so the whole range of about -0.7 to +0.7 volts is available to the program). The amplitude will be controlled through the application volume. On Linux this may not be necessary, depending on the audio system.</li>
+            <li>Start the signal generator application. In the "Devices" menu the item "SignalAmplifier" should be available for selection. If not, press "Scan Again".</li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>

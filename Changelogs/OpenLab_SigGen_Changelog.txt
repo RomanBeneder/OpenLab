@@ -1,0 +1,15 @@
+OpenLab SigGen Version 20180227_112 - Release
+
+merged last version of SigGen from Mrs. Schierer (comply with our naming scheme and structure)
+fixed wrong version numbers in several sections in the about window
+removed unnecessary items from the defaultConfig.properties file (items from the oscilloscope)
+
+OpenLab SigGen Version 20180123_111 - RC2
+
+bugfix - if used outside of the eclipse environment, the creation of a config file
+for feedback dialog failed --> null pointer exception
+
+OpenLab SigGen Version 20180119_110 - RC1
+
+bugfix - volume control produced an overflow due to wrong datatype --> changed short to integer
+disabled signal export function due to incomplete implementation

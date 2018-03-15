@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Draw Waveform Window</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrap">
+    <div class="menu">
+        <a href="index.html">Home</a></br>
+        <a href="about.html">About</a></br>
+        <p><b>User Interface</b></p>
+        <a href="mainwindow.html">Main Window</a></br>
+        <a href="ifftwindow.html">Inverse Fourier Window</a></br>
+        <a href="drawwindow.html">Draw Waveform Window</a></br>
+        <p><b>Devices</b></p>
+        <a href="soundcard.html">Soundcard</a></br>
+        <li><a href="signalamplifier.html">Signal Amplifier</a></li></br>
+        <a href="ucbased.html">uC Board</a></br>
+        <a href="fpgabased.html">FPGA Board</a></br>
+    </div>
+    <div class="separator"></div>
+    <div class="content">
+        
+        <h2>Draw Waveform Window</h2>
+        Find it under <i>View -> Draw Wave</i>
+        <p>This windows allows you to graphically specify a waveform. It works by selecting points and then connecting them with interpolation.</p>
+
+        <h4>Linear Interpolation</h4>
+        Connects the points with straight lines
+        
+        <h4>Cosine Interpolation</h4>
+        The interconnection is based on the cosine function       
+                
+        <h4>Cubic Interpolation</h4>
+        The interconnection is based on a 3rd order polynomial. The resulting curve is slightly
+        tighter than the curve produces by the cosine interpolation.
+               
+        <h4>Catmull-Rom Splines</h4>
+        Also based on 3rd order polynomials, but additionally uses the first derivative for interpolation. The segments tend to be connected more continuous. The curves are not as tight compared to the cosine and cubic interpolation and might overshoot.
+        
+        
+        <h3>Usage</h3>
+        <b>Ctrl+Leftclick: </b>Creates a new "waypoint" at the cursors position</br>
+        <b>Rightclick: </b>Deletes the "waypoint" under the cursor</br></br>
+        Points can be dragged with the left mouse button. The outermost points cannot be removed nor moved horizontally as there are necessary for interpolation.
+    </div>
+    </div>
+</body>
+</html>

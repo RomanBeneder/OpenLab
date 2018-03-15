@@ -1,0 +1,74 @@
+GUI Version 1.1.3 --> READY FOR RELEASE
+Changes:
+this is a merge from the last version from Mrs. Schierer to comply with our naming scheme and structure
+updated JNA lib from 4.5.0 to 4.5.1
+updated purejavacom lib from 1.0.0 to 1.0.1
+
+Known Bugs: 
+NONE
+
+GUI Version 1.1.2 --> not for release! internal version by Susanne Schierer
+Changes:
+bugfix - critical bug in additional measurements which previously lead to a memory leak
+removed old unused code in all files
+added some feedback questions about add. measurements and FFT
+
+Known Bugs: 
+NONE
+
+GUI Version 1.1.1 --> not for release!
+Changes:
+switched order what should happen first if feedback dialog on exit should be shown
+---> now disconnects device only if feedback dialog is closed AND exit condition is
+fulfilled again. (for example X on top right)
+---> before this change, device was disconnected immediately and then feedback dialog
+was shown. So if user wanted to continue measurement user had to reconnect again   
+
+Known Bugs: 
+WARNING! MEM LEAK IN ADD.MEASUREMENTS DETECTED! SEE LOG FOLDER
+
+GUI Version 1.1.0 --> not for release!
+Changes:
+added Math Operations
+added Labels
+added FFT
+added Background colors
+added first time support for PCB V4 series (V2/V3 compatible)
+added Overvoltage warning
+bugfix - trigger not correctly set after first start
+bugfix - signal inverts if label was set
+bugfix - invert overwrittes label setting
+bugfix - nullpointer at GUI start
+bugfix - add. measurements flickering and showing wrong values
+bugfix - add. measurements change trigger source automaticaly
+
+General:
+Changed naming of the project folder to BuildID number (see about window) for better understanding
+
+Known Bugs:
+WARNING! MEM LEAK IN ADD.MEASUREMENTS DETECTED! SEE LOG FOLDER
+
+GUI Version 1.0.3
+Additional Measurments
+Single-Shot Bug fixing
+Trigger-OFF Bug fixing
+Trigger Mode Selection (Auto/Normal)
+
+GUI Version 1.0.2
+Horizontal Positioning (Adjustable Step within Channel Settings Dialog)
+Corrected 'Export to .csv' Function (Time Base and Stability)
+
+GUI Version 1.0.1
+Bug Fixing (Serail Interface - Preamble)
+Channel Parameter Adjustment (Probe Attenuation)
+OpenLab Media Center 
+Added Menu Icons
+
+GUI Version 1.0.0
+FXML based GUI
+Frequency Measurement
+Probe Compensation
+Extended About Dialog
+Integrated HTML based Help Menu
+Removed Feedback 'Send Mail' Function (Generate File [Anonymity])
+

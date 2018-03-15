@@ -1,0 +1,65 @@
+==== OpenLab Oscilloscope FPGA DE0 Changelog ====
+
+V1.3.2 (release candidate for V2/3 PCBs based on V1.4.5 FPGA)
+
+.) includes same bugfixes as V1.4.5
+
+Known Bugs: currently none
+
+V1.4.5 (release candidate 3)
+
+.) fixed a bug in the single shot routine. 
+A new single shot event after a previous one sometimes failed because of wrong packet order
+
+Known Bugs: currently none
+
+V1.4.4 (only internal!)
+
+.) improved stability during "send sample data" if a GUI request occurred
+
+V1.4.3 (release candidate 2)
+
+.) fixed the "ETS stop sampling at high frequencies" bug --> fix in V1.4.2 only solved the symptoms not the problem
+
+V1.4.2 (release candidate 1)
+
+.) changed debouncing for new PCB --> prevents from sudden sample stops at to high frequencies in ETS!
+.) removed and cleanend some code in sampling routine
+
+V1.4.1 (only internal release)
+
+.) change AmpStage control to new PCB --> 4 stages only
+.) correct pinning for new PCB
+
+V1.3.1
+
+Changelog:
+
+.) fixed a critical bug in the single shot routine -> single shot was NOT working before this version!
+.) fixed a critical bug in the header and payload CRC calculation -> CRC errors should be drastically reduced now (now only com. related CRC errors)
+.) fixed misleading signal routing of ADC data to sampling units
+.) removed unnecessary START state because the initial byte transfer is not required anymore
+.) removed the variable baudrate configuration --> baudrate is now fixed at 1.2Mbaud (works reliable on all tested machines)
+.) added a "Debug" mode which is used to show useful status information via the on-board LEDs (only accessible via a certain switch setting)
+.) rewritten whole triggering module to distinguish between auto, normal and single shot triggering modes (those are now separately processed at the GUI as well)
+
+V1.2.9
+
+Changelog:
+
+.) updated timings of the PC-wait state --> no more magic numbers and strange count values
+.) wait time in PC-wait state slightly reduced --> faster data transfer (seems to be stable with new GUI version from 20.02.17 + communication fix)
+
+V1.2.5 (only internal release)
+
+Changelog:
+
+.) fixed a bug where the trigger position was off due to way to strict debouncing of the trigger signal
+.) fixed timing issues where signals in ETS looked strange
+.) completely rewritten NACK message generation and error detection -> did not work in previous versions!
+.) increased edge detect frequency counter to support full 4 bytes count values
+.) removed many unnecessary shared variables in the protocol state machine -> important!
+.) removed unnecessary NACK wait state
+.) plausibility check in SSM command if 0 was send as samples per packet --> send NACK message to GUI with correct Error Code
+.) FPGA will turn off data transfer (set channel 1 and 2 to off) if a GHWV or GSWV was received --> prevent data overflow/overwrite if a resync with GUI is necessary
+.) improved ETS ADC first sample timing to ensure trigger position is not delayed --> added own timing for each ETS stage
