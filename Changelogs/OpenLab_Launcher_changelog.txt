@@ -1,0 +1,21 @@
+OpenLab Launcher Version 150318 - ready for release
+- no src file was changed
+- only the Logic Analyzer Button was disabled because this tool is currently not available
+
+OpenLab Launcher Version 260218 - ready for release
+
+merged last version of the Launcher app from Mrs. Schierer (comply to our naming scheme and structure)
+CRITICAL bugfix - unable to launch any app due to launcher configuration overwrite with feedback config data (introduce feedback flag)
+--> this lead to invalid entries in the launcher path definitions (null as foldername,...)
+--> split configuration into two separate files one for defining paths, folders and arguments for the apps and one specific file for
+saving Toolkit relevant information (for example introduce feedback flag)
+update - moved log files into log folder
+
+WARNING: All Buttons enabled in this version! To disable a button change behavior in LauncherGUI.fxml
+
+OpenLab Launcher Version 130118 - ready for release
+
+added support for all OpenLab tools (start and supervise process execution)
+bugfix - Launcher was not able to correctly monitor more than 2 applications
+
+WARNING: All Buttons enabled in this version! To disable a button change behavior in LauncherGUI.fxml
