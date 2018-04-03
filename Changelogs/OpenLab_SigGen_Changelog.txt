@@ -1,3 +1,11 @@
+OpenLab SigGen Version 20180403_113 - Release
+
+bugfix - if the external HW was selected the GUI used always the first sound device found
+--> this is generally bad for linux --> changed so the user is able to select the sound device
+in the options menu. The selected device is also saved in a config file.
+bugfix - volume control in linux is not linear! Previous version calculated wrong values for
+sound device.
+
 OpenLab SigGen Version 20180227_112 - Release
 
 merged last version of SigGen from Mrs. Schierer (comply with our naming scheme and structure)
