@@ -1,0 +1,96 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADS7885
+D TEXAS INSTRUMENTS 	ADS7885SDBVT  Analog/Digital-Wandler, 8 bit, 3 MS/s, Einfach, 2.7 V, 5.5 V, SOT-23
+K ADC 8bit SPI
+F http://www.farnell.com/datasheets/1882294.pdf
+$ENDCMP
+#
+$CMP BAV99
+D Diode BAV99
+K DEV DIODE BAV99
+$ENDCMP
+#
+$CMP C
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP CONN_01X01
+D Connector, single row, 01x01
+K connector
+$ENDCMP
+#
+$CMP CONN_01X02
+D Connector, single row, 01x02
+K connector
+$ENDCMP
+#
+$CMP CONN_01X05
+D Connector, single row, 01x05
+K connector
+$ENDCMP
+#
+$CMP CONN_02X20
+D Connector, double row, 02x20
+K connector
+$ENDCMP
+#
+$CMP CP
+D Polarised capacitor
+$ENDCMP
+#
+$CMP D
+D Diode
+$ENDCMP
+#
+$CMP DG445DY-E3
+D Quad SPST CMOS Analog Switches
+K DG445DY-E3 - Analogschalter
+$ENDCMP
+#
+$CMP D_Schottky_Small
+D Diode Schottky
+$ENDCMP
+#
+$CMP Jumper_NO_Small
+D Jumper normally open
+K Jumper, Link
+$ENDCMP
+#
+$CMP LT1611
+D LT1611CS5#TRMPBF -  DC/DC-Schaltregler, invertierend, einstellbar, 0.9V-10Vin, 550mAout, 1.8MHz, SOT-23-5
+K LT1611 0.9V-10Vin, 550mAout, 1.8MHz
+$ENDCMP
+#
+$CMP LT1819
+D Dual Op amp
+K LT1819
+F http://www.farnell.com/datasheets/1692381.pdf
+$ENDCMP
+#
+$CMP L_Small
+D Inductor
+$ENDCMP
+#
+$CMP Q_NJFET_DSG
+D Transistor N-JFET (general)
+K njfet n-jfet transistor
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP SW_SPDT_OpenLab
+D Switch SPDT
+K Switch
+F http://www.farnell.com/datasheets/1683358.pdf
+$ENDCMP
+#
+$CMP TEST_1P
+D point
+K point tp
+$ENDCMP
+#
+#End Doc Library

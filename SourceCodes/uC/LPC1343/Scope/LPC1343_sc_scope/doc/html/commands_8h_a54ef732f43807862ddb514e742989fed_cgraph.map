@@ -1,5 +1,0 @@
-<map id="hardwareVersion" name="hardwareVersion">
-<area shape="rect" id="node2" href="$crc_8c.html#af2c561995b4de360357d8e4f51bb0572" title="Function gen_crc16() generates a CRC16. " alt="" coords="185,5,269,32"/>
-<area shape="rect" id="node3" href="$uart_8c.html#a1acc000455aa2f89b5bd7900fe2a6caf" title="Function UART_putstr() puts a string on the UART. " alt="" coords="179,56,276,83"/>
-<area shape="rect" id="node4" href="$uart_8c.html#a26d50e33320530ba0a9a8bac14f9a4b8" title="Function UART_putchar() puts a character on the UART. " alt="" coords="324,56,433,83"/>
-</map>

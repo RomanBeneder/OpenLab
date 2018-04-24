@@ -1,8 +1,0 @@
-<map id="uart.c" name="uart.c">
-<area shape="rect" id="node2" href="$uart_8h.html" title="UART source file. " alt="" coords="121,80,176,107"/>
-<area shape="rect" id="node6" href="$commands_8h.html" title="commands.h" alt="" coords="99,155,198,181"/>
-<area shape="rect" id="node7" href="$timer_8h.html" title="32&#45;bit Timer header file " alt="" coords="118,229,179,256"/>
-<area shape="rect" id="node9" href="$pwm_8h.html" title="16&#45;bit PWM header file " alt="" coords="33,229,93,256"/>
-<area shape="rect" id="node10" href="$crc_8h.html" title="crc.h" alt="" coords="186,304,237,331"/>
-<area shape="rect" id="node8" href="$gpio_8h.html" title="GPIO header file. " alt="" coords="53,304,111,331"/>
-</map>

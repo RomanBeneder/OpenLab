@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADS7885
+D TEXAS INSTRUMENTS 	ADS7885SDBVT  Analog/Digital-Wandler, 8 bit, 3 MS/s, Einfach, 2.7 V, 5.5 V, SOT-23
+K ADC 8bit SPI
+F http://www.farnell.com/datasheets/1882294.pdf
+$ENDCMP
+#
+#End Doc Library

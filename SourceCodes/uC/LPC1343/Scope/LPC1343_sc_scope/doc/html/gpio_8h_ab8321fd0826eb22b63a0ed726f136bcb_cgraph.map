@@ -1,5 +1,0 @@
-<map id="GPIO_ToggleOutput" name="GPIO_ToggleOutput">
-<area shape="rect" id="node2" href="$gpio_8h.html#a5f452a00e86fca5092cd369f056d54cb" title="Function GPIO_GetPinLevel() reads a GPIO pin&#39;s data register. It returns the pin&#39;s current logic leve..." alt="" coords="205,5,341,32"/>
-<area shape="rect" id="node3" href="$gpio_8h.html#a4a0bfabfc746b542104b3659eaff664a" title="Function GPIO_SetOutputLevel() sets a GPIO pin&#39;s output level. " alt="" coords="197,56,349,83"/>
-<area shape="rect" id="node4" href="$gpio_8h.html#aa62fe9316e51ac6ab81b1af775a5bfb6" title="Function GPIO_SetDirection() sets a GPIO pin as input or output. " alt="" coords="397,56,532,83"/>
-</map>

@@ -1,0 +1,488 @@
+EESchema Schematic File Version 2
+LIBS:Master_Project-rescue
+LIBS:analog_devices
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:allegro
+LIBS:Altera
+LIBS:battery_management
+LIBS:bbd
+LIBS:bosch
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:hc11
+LIBS:ir
+LIBS:Lattice
+LIBS:leds
+LIBS:maxim
+LIBS:mechanical
+LIBS:modules
+LIBS:motor_drivers
+LIBS:motors
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:triac_thyristor
+LIBS:ttl_ieee
+LIBS:video
+LIBS:wiznet
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:zetex
+LIBS:Zilog
+LIBS:master_library
+LIBS:openLab_LA
+LIBS:OpenLab_Oscilloscope_FPGA_KiCAD
+LIBS:Master_Project-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title "Multimeter"
+Date "2018-02-05"
+Rev "V0.0.4"
+Comp "University of Applied Sciences - Markus Lechner"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1800 2900 2400 2150
+U 59C016D3
+F0 "MCU Signal Processing" 60
+F1 "MCU_signal_processing.sch" 60
+F2 "MCU_ADC_REF_SIG" I R 4200 3600 60 
+F3 "MCU_ADC_MES_SIG" I R 4200 3700 60 
+F4 "MCU_SPI_DDS_SCLK" O R 4200 3050 60 
+F5 "MCU_SPI_DDS_SDATA" O R 4200 3150 60 
+F6 "MCU_DDS_FSYNC" O R 4200 3250 60 
+F7 "MCU_CURR_RG_A" O L 1800 3900 60 
+F8 "MCU_CURR_RG_B" O L 1800 4000 60 
+F9 "MCU_PS_MU_PG" I L 1800 3050 60 
+F10 "MCU_LCR_UI_GAIN_x10" O L 1800 3600 60 
+F11 "MCU_LCR_UI_SEL" O L 1800 3400 60 
+F12 "MCU_LCR_UI_GAIN_x100" O L 1800 3700 60 
+F13 "MCU_BUZZER" O L 1800 4200 60 
+F14 "MCU_UI_SIGNAL" I R 4200 4300 60 
+F15 "MCU_DAC_SIG" O L 1800 4400 60 
+F16 "MCU_CONT_TST" I L 1800 4500 60 
+F17 "MCU_FREQ_TMR" I L 1800 4600 60 
+F18 "MCU_TOOL_SEL_A" O L 1800 4800 60 
+F19 "MCU_TOOL_SEL_B" O L 1800 4900 60 
+F20 "MCU_UI_SEL" O R 4200 4200 60 
+F21 "MCU_UI_GAIN_x10" O R 4200 4400 60 
+F22 "MCU_UI_GAIN_x100" O R 4200 4500 60 
+F23 "MCU_U_SIGN" O R 4200 4100 60 
+$EndSheet
+Text Label 1650 950  2    60   ~ 0
+TLD_MU_PG
+Text Label 9550 950  0    60   ~ 0
+TLD_DDS_SCLK
+Wire Wire Line
+	9550 950  9300 950 
+Text Label 4450 3050 0    60   ~ 0
+TLD_DDS_SCLK
+Wire Wire Line
+	4450 3050 4200 3050
+Text Label 9550 1050 0    60   ~ 0
+TLD_DDS_SDATA
+Wire Wire Line
+	9550 1050 9300 1050
+Text Label 9550 1150 0    60   ~ 0
+TLD_DDS_FSYNC
+Wire Wire Line
+	9550 1150 9300 1150
+Text Label 4450 3150 0    60   ~ 0
+TLD_DDS_SDATA
+Wire Wire Line
+	4450 3150 4200 3150
+Text Label 4450 3250 0    60   ~ 0
+TLD_DDS_FSYNC
+Wire Wire Line
+	4450 3250 4200 3250
+Text Label 6850 950  2    60   ~ 0
+TLD_LCR_UI_SEL
+Wire Wire Line
+	7100 950  6850 950 
+Text Label 6850 1150 2    60   ~ 0
+TLD_LCR_UI_GAIN_x10
+Text Label 6850 1250 2    60   ~ 0
+TLD_LCR_UI_GAIN_x100
+Text Label 6850 1450 2    60   ~ 0
+TLD_CURR_RG_A
+Text Label 6850 1550 2    60   ~ 0
+TLD_CURR_RG_B
+Wire Wire Line
+	6850 1150 7100 1150
+Wire Wire Line
+	7100 1250 6850 1250
+Wire Wire Line
+	6850 1450 7100 1450
+Wire Wire Line
+	7100 1550 6850 1550
+Text Label 1550 3400 2    60   ~ 0
+TLD_LCR_UI_SEL
+Wire Wire Line
+	1800 3400 1550 3400
+Text Label 1550 3900 2    60   ~ 0
+TLD_CURR_RG_A
+Text Label 1550 4000 2    60   ~ 0
+TLD_CURR_RG_B
+Wire Wire Line
+	1550 3600 1800 3600
+Wire Wire Line
+	1800 3700 1550 3700
+Wire Wire Line
+	1550 3900 1800 3900
+Wire Wire Line
+	1800 4000 1550 4000
+Text Label 9550 1500 0    60   ~ 0
+TLD_ADC_REF_SIG
+Text Label 9550 1600 0    60   ~ 0
+TLD_ADC_MES_SIG
+Wire Wire Line
+	9550 1600 9300 1600
+Wire Wire Line
+	9300 1500 9550 1500
+Text Label 4450 3600 0    60   ~ 0
+TLD_ADC_REF_SIG
+Text Label 4450 3700 0    60   ~ 0
+TLD_ADC_MES_SIG
+Wire Wire Line
+	4450 3700 4200 3700
+Wire Wire Line
+	4200 3600 4450 3600
+Text Label 1550 3050 2    60   ~ 0
+TLD_MU_PG
+Wire Wire Line
+	6850 3050 7100 3050
+Text Label 6850 3050 2    60   ~ 0
+TLD_UI_SEL
+Wire Wire Line
+	6850 3150 7100 3150
+Text Label 6850 3150 2    60   ~ 0
+TLD_UI_GAIN_x10
+Text Label 6850 3250 2    60   ~ 0
+TLD_UI_GAIN_x100
+Wire Wire Line
+	6850 3250 7100 3250
+Text Label 6850 3450 2    60   ~ 0
+TLD_U_SIGN
+Wire Wire Line
+	6850 3450 7100 3450
+Text Label 6850 3550 2    60   ~ 0
+TLD_UI_SIGNAL
+Wire Wire Line
+	6850 3550 7100 3550
+Text Label 6850 3850 2    60   ~ 0
+TLD_BUZZER
+Wire Wire Line
+	6850 3850 7100 3850
+Text Label 9350 3050 0    60   ~ 0
+TLD_TOOL_SEL_A
+Text Label 9350 3150 0    60   ~ 0
+TLD_TOOL_SEL_B
+Wire Wire Line
+	9350 3150 9100 3150
+Wire Wire Line
+	9100 3050 9350 3050
+Text Label 9350 3500 0    60   ~ 0
+TLD_FREQ_TMR
+Text Label 9350 3600 0    60   ~ 0
+TLD_DAC_SIG
+Wire Wire Line
+	9350 3600 9100 3600
+Wire Wire Line
+	9100 3500 9350 3500
+Text Label 1550 3600 2    60   ~ 0
+TLD_LCR_UI_GAIN_x10
+Text Label 1550 3700 2    60   ~ 0
+TLD_LCR_UI_GAIN_x100
+Text Label 9350 3700 0    60   ~ 0
+TLD_CONT_TST
+Wire Wire Line
+	9350 3700 9100 3700
+Text Label 1550 4200 2    60   ~ 0
+TLD_BUZZER
+Wire Wire Line
+	1800 4200 1550 4200
+Text Label 1550 4400 2    60   ~ 0
+TLD_DAC_SIG
+Wire Wire Line
+	1800 4400 1550 4400
+Text Label 1550 4500 2    60   ~ 0
+TLD_CONT_TST
+Wire Wire Line
+	1800 4500 1550 4500
+Text Label 1550 4600 2    60   ~ 0
+TLD_FREQ_TMR
+Wire Wire Line
+	1800 4600 1550 4600
+Text Label 1550 4800 2    60   ~ 0
+TLD_TOOL_SEL_A
+Wire Wire Line
+	1800 4800 1550 4800
+Text Label 1550 4900 2    60   ~ 0
+TLD_TOOL_SEL_B
+Wire Wire Line
+	1800 4900 1550 4900
+Text Label 4450 4200 0    60   ~ 0
+TLD_UI_SEL
+Text Label 4450 4300 0    60   ~ 0
+TLD_UI_SIGNAL
+Wire Wire Line
+	4450 4300 4200 4300
+Wire Wire Line
+	4200 4200 4450 4200
+Text Label 4450 4400 0    60   ~ 0
+TLD_UI_GAIN_x10
+Text Label 4450 4500 0    60   ~ 0
+TLD_UI_GAIN_x100
+Wire Wire Line
+	4450 4500 4200 4500
+Wire Wire Line
+	4200 4400 4450 4400
+Text Label 4450 4100 0    60   ~ 0
+TLD_U_SIGN
+Wire Wire Line
+	4200 4100 4450 4100
+$Comp
+L Mounting_Hole_PAD MK101
+U 1 1 59C18E37
+P 5450 7350
+F 0 "MK101" H 5450 7600 50  0000 C CNN
+F 1 "MH_PAD" H 5450 7525 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_2.2mm_M2_DIN965_Pad" H 5450 7350 50  0001 C CNN
+F 3 "" H 5450 7350 50  0001 C CNN
+	1    5450 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting_Hole_PAD MK102
+U 1 1 59C19011
+P 5900 7350
+F 0 "MK102" H 5900 7600 50  0000 C CNN
+F 1 "MH_PAD" H 5900 7525 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 5900 7350 50  0001 C CNN
+F 3 "" H 5900 7350 50  0001 C CNN
+	1    5900 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting_Hole_PAD MK103
+U 1 1 59C199A2
+P 6300 7350
+F 0 "MK103" H 6300 7600 50  0000 C CNN
+F 1 "MH_PAD" H 6300 7525 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 6300 7350 50  0001 C CNN
+F 3 "" H 6300 7350 50  0001 C CNN
+	1    6300 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting_Hole_PAD MK104
+U 1 1 59C199A8
+P 6750 7350
+F 0 "MK104" H 6750 7600 50  0000 C CNN
+F 1 "MH_PAD" H 6750 7525 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 6750 7350 50  0001 C CNN
+F 3 "" H 6750 7350 50  0001 C CNN
+	1    6750 7350
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 7100 2900 2000 1100
+U 59B2B0C6
+F0 "MT Measurement Tools" 60
+F1 "MT_Measurement_Tools.sch" 60
+F2 "MT_BUZZER" I L 7100 3850 60 
+F3 "MT_UI_GAIN_x10" I L 7100 3150 60 
+F4 "MT_UI_GAIN_x100" I L 7100 3250 60 
+F5 "MT_U_SIGN" I L 7100 3450 60 
+F6 "MT_UI_SIGNAL" O L 7100 3550 60 
+F7 "MT_TOOL_SEL_A" I R 9100 3050 60 
+F8 "MT_TOOL_SEL_B" I R 9100 3150 60 
+F9 "MT_DAC_SIG" I R 9100 3600 60 
+F10 "MT_FREQ_TMR" O R 9100 3500 60 
+F11 "MT_UI_SEL" I L 7100 3050 60 
+F12 "MT_CONT_TST" O R 9100 3700 60 
+$EndSheet
+$Sheet
+S 1800 800  1350 900 
+U 59896F50
+F0 "PS Power Supply" 60
+F1 "PS_Power_Supply.sch" 60
+F2 "PS_MU_PG" O L 1800 950 60 
+$EndSheet
+$Comp
+L GND #PWR01
+U 1 1 59C5B426
+P 5450 7600
+F 0 "#PWR01" H 5450 7350 50  0001 C CNN
+F 1 "GND" H 5450 7450 50  0000 C CNN
+F 2 "" H 5450 7600 50  0001 C CNN
+F 3 "" H 5450 7600 50  0001 C CNN
+	1    5450 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 7450 5450 7600
+Wire Wire Line
+	5450 7550 6750 7550
+Wire Wire Line
+	5900 7550 5900 7450
+Connection ~ 5450 7550
+Wire Wire Line
+	6300 7550 6300 7450
+Connection ~ 5900 7550
+Wire Wire Line
+	6750 7550 6750 7450
+Connection ~ 6300 7550
+$Comp
+L Fiducial FID101
+U 1 1 5A310497
+P 3700 7300
+F 0 "FID101" H 3700 7500 60  0000 C CNN
+F 1 "Fiducial" H 3700 7100 60  0000 C CNN
+F 2 "Multimeter:Fiducial_1.5mm_Dia_2.54mm_Outer_CopperTop" H 3700 7300 60  0001 C CNN
+F 3 "" H 3700 7300 60  0001 C CNN
+	1    3700 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fiducial FID102
+U 1 1 5A310B0E
+P 4150 7300
+F 0 "FID102" H 4150 7500 60  0000 C CNN
+F 1 "Fiducial" H 4150 7100 60  0000 C CNN
+F 2 "Multimeter:Fiducial_1.5mm_Dia_2.54mm_Outer_CopperTop" H 4150 7300 60  0001 C CNN
+F 3 "" H 4150 7300 60  0001 C CNN
+	1    4150 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fiducial FID103
+U 1 1 5A310C6F
+P 4600 7300
+F 0 "FID103" H 4600 7500 60  0000 C CNN
+F 1 "Fiducial" H 4600 7100 60  0000 C CNN
+F 2 "Multimeter:Fiducial_1.5mm_Dia_2.54mm_Outer_CopperTop" H 4600 7300 60  0001 C CNN
+F 3 "" H 4600 7300 60  0001 C CNN
+	1    4600 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fiducial FID104
+U 1 1 5A311293
+P 5050 7300
+F 0 "FID104" H 5050 7500 60  0000 C CNN
+F 1 "Fiducial" H 5050 7100 60  0000 C CNN
+F 2 "Multimeter:Fiducial_1.5mm_Dia_2.54mm_Outer_CopperTop" H 5050 7300 60  0001 C CNN
+F 3 "" H 5050 7300 60  0001 C CNN
+	1    5050 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02 J101
+U 1 1 5A36C5EF
+P 2900 7250
+F 0 "J101" H 2900 7350 50  0000 C CNN
+F 1 "Conn_01x02" H 2900 7050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 2900 7250 50  0001 C CNN
+F 3 "" H 2900 7250 50  0001 C CNN
+	1    2900 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5A36DF47
+P 2600 7500
+F 0 "#PWR02" H 2600 7250 50  0001 C CNN
+F 1 "GND" H 2600 7350 50  0000 C CNN
+F 2 "" H 2600 7500 50  0001 C CNN
+F 3 "" H 2600 7500 50  0001 C CNN
+	1    2600 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 7250 2600 7250
+Wire Wire Line
+	2600 7250 2600 7500
+Wire Wire Line
+	2700 7350 2600 7350
+Connection ~ 2600 7350
+$Sheet
+S 7100 800  2200 1300
+U 598A95D5
+F0 "LCR-Meter Measurement Unit" 60
+F1 "LCR_measurement_unit.sch" 60
+F2 "MU_ADC_REF_SIG" O R 9300 1500 60 
+F3 "MU_DDS_SCLK" I R 9300 950 60 
+F4 "MU_DDS_SDATA" I R 9300 1050 60 
+F5 "MU_DDS_FSYNC" I R 9300 1150 60 
+F6 "MU_ADC_MES_SIG" O R 9300 1600 60 
+F7 "MU_LCR_UI_SEL" I L 7100 950 60 
+F8 "MU_CURR_RG_A" I L 7100 1450 60 
+F9 "MU_CURR_RG_B" I L 7100 1550 60 
+F10 "MU_LCR_UI_GAIN_x10" I L 7100 1150 60 
+F11 "MU_LCR_UI_GAIN_x100" I L 7100 1250 60 
+$EndSheet
+Wire Wire Line
+	1800 950  1650 950 
+Wire Wire Line
+	1800 3050 1550 3050
+$EndSCHEMATC

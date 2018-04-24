@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BC848
+D Bipolarer HF-Transistor, NPN, 30 V, 100 MHz, 150 mW, 100 mA, 200
+K NPN Low Noise Small Signal Transistor
+F http://www.farnell.com/datasheets/1907697.pdf
+$ENDCMP
+#
+#End Doc Library

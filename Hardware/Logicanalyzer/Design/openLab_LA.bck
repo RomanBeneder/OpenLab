@@ -1,0 +1,33 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BC847C
+D 45V Vce, 100mA IC, NPN Transistor, SOT-23
+K Transistor NPN
+$ENDCMP
+#
+$CMP LPC1343FBD48
+D LPC1343FBD48
+K lpc1343
+$ENDCMP
+#
+$CMP MAX4392EUA+
+D Dual OpAmp 85MHz Rail-to-rail
+K opv, opamp
+$ENDCMP
+#
+$CMP MCP1804T-A002I/OT
+D LDO regulator out:10V in:>2V SOT-23-5
+K ldo
+$ENDCMP
+#
+$CMP NUP1301
+D ESD Protection Diode Array SOT23
+K ESD, Diode, Array
+$ENDCMP
+#
+$CMP Si8640BB-B-IS
+D Silicon Labs 4ch Digital Isolator WB SOIC16
+K isolator digital
+$ENDCMP
+#
+#End Doc Library
