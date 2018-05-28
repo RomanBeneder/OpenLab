@@ -1,5 +1,9 @@
 ==== OpenLab Oscilloscope FPGA DE0 Changelog ====
 
+V1.3.3 (V2/3 PCBs) and V1.4.6 (V4 PCBs)
+
+.) fixed a bug which added a delay to the single shot function
+
 V1.3.2 (release candidate for V2/3 PCBs based on V1.4.5 FPGA)
 
 .) includes same bugfixes as V1.4.5

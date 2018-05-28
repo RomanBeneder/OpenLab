@@ -1,3 +1,8 @@
+GUI Version 1.1.4 --> READY FOR RELEASE
+Changes:
+removed check if single shot packet is in range, because this routine was buggy
+check is not necessary in GUI because FPGA only sends packet if trigger event was detected
+
 GUI Version 1.1.3 --> READY FOR RELEASE
 Changes:
 this is a merge from the last version from Mrs. Schierer to comply with our naming scheme and structure
