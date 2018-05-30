@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP Si8640BB-B-IS
-D Silicon Labs 4ch Digital Isolator
-K isolator digital
-$ENDCMP
-#
-#End Doc Library

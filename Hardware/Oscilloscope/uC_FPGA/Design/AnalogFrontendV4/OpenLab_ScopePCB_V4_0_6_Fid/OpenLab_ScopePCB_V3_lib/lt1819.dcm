@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP LT1819
-D Dual Op amp
-K LT1819
-F http://www.farnell.com/datasheets/1692381.pdf
-$ENDCMP
-#
-#End Doc Library

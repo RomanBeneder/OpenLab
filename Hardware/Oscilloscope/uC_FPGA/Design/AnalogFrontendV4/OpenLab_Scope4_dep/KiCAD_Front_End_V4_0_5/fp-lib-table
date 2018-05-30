@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name KiCAD_Front_End_footprint)(type KiCad)(uri "$(KIPRJMOD)\\KiCAD_Front_End_footprint.pretty")(options "")(descr ""))
-)

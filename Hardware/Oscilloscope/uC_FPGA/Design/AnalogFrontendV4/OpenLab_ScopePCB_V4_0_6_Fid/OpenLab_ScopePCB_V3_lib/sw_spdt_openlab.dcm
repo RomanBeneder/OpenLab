@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP SW_SPDT_OpenLab
-D Switch SPDT
-K Switch
-F http://www.farnell.com/datasheets/1683358.pdf
-$ENDCMP
-#
-#End Doc Library

@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name OpenLab_ScopePCB_footprint)(type KiCad)(uri "$(KIPRJMOD)\\OpenLab_ScopePCB_footprint.pretty")(options "")(descr ""))
-)
