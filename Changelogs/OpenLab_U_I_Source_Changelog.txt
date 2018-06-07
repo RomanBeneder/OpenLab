@@ -1,0 +1,7 @@
+OpenLab UI-Source Java GUI Build ID 060618 -- INITIAL RELEASE
+
+bugfix - fixed bad error message handling
+
+OpenLab UI-Source Java GUI Build ID 050618 -- INTERNAL ONLY
+
+This is the first release version
