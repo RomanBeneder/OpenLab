@@ -1,0 +1,19 @@
+Prerequisits
+
+    Download Atmel Flip (http://www.atmel.com/tools/flip.aspx)
+
+Flashing the Signal Amplifer Hardware:
+
+    Connect the hardware via USB
+    Hold the reset & bootloader button
+    Release the reset button
+    Release the bootloader button short afterwards
+
+    Start Flip
+    
+    Set peer device                 (Device -> Select -> ATmega16U2)
+    Load the .hex file              (File -> Load Hex File)
+    Set communication mode to USB   (Settings -> Communication -> USB)
+    Press "Open" in the Dialog
+    Select Erase + Program + Verify in the main window
+    Press "Run"

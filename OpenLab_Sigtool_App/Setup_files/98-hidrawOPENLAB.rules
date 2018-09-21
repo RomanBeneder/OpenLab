@@ -1,0 +1,3 @@
+KERNEL=="hidraw*", ATTRS{manufacturer}=="OPENLAB FHTW  ", ATTRS{idVendor}=="1fc9", ATTRS{idProduct}=="0003", MODE="0666"
+KERNEL=="hidraw*", ATTRS{serial}=="OpenLab-Multimeter", ATTRS{idVendor}=="1fc9", ATTRS{idProduct}=="0081", MODE="0666"
+

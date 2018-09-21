@@ -1,4 +1,12 @@
-OpenLab Launcher Version 150318 - ready for release
+OpenLab Launcher Version 140618 - ready for release
+added a logger functionality to the launcher
+- launcher will now log system information and error messages in a .txt file
+
+OpenLab Launcher Version 120618 - internal only
+added dialog for installation instruction
+fixed a bug which prevented the launcher from opening the installation instruction pdf in linux
+
+OpenLab Launcher Version 150318 - internal only
 - no src file was changed
 - only the Logic Analyzer Button was disabled because this tool is currently not available
 
